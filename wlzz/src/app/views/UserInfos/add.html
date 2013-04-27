@@ -1,0 +1,74 @@
+#{extends 'main_title_bar.html'/}
+#{set 'moreStyles'}
+	<link rel="stylesheet" href="@{'/public/stylesheets/information.css'}" />
+	<link rel="stylesheet" href="@{'/public/stylesheets/bar.css'}" />
+#{/set}
+#{set 'moreScripts'}
+	<script type="text/javascript" src="@{'/public/javascripts/information.js'}"></script>
+#{/set}
+#{set title:'个人信息'/}
+		<div class="content">
+			<div class="infobar">
+				<p>
+					<strong>添加个人详细信息</strong> (用*标记的信息是十分重要的信息)
+				</p>
+			</div>
+			<form action="@{UserInfos.add}" method="post">
+			<input type="hidden" name="userinfo.id" value="${ID}"/>
+			
+				<span>
+					<label for="account">用户账号:</label> 
+					<label for="#" id="account">${ACCOUNT}</label>
+					<input type="hidden" name="ACCOUNT" value="${ACCOUNT}"/>
+				</span>
+				<span>
+					<label for="nicknameinput">*昵称:</label>
+					<input type="text" name="userinfo.name" value="${userinfo?.name}" id="nicknameinput" onblur="onBlur(this,'nickname');" onfocus="onFocus(this,'nickname');"/>
+					<label for="" class="error" style="color: red;float:none;">#{error 'userinfo.name'/}</label> 
+					<label for="#" id="nickname" class="remind">请输入正确的昵称</label>
+				</span>
+				<span>
+					<label for="mailinput">*邮箱:</label>
+					<input type="text" name="userinfo.email" value="${userinfo?.email}" id="mailinput" onblur="onBlur(this,'mail');" onfocus="onFocus(this,'mail');"/>
+					<label for="" class="error" style="color: red;float:none;">#{error 'userinfo.email'/}</label>
+					<label for="#" id="mail" class="remind">请输入正确邮箱</label>
+				</span>
+				<span>
+					<label for="ageinput">年龄:</label>
+					<input type="text" name="userinfo.age" value="${userinfo?.age}" id="ageinput" onblur="onBlur(this,'age');" onfocus="onFocus(this,'age');"/>
+					<label for="" class="error" style="color: red;float:none;">#{error 'userinfo.age'/}</label>
+					<label for="#" id="age" class="remind">请输入正确的年龄</label>
+				</span>
+				<span>
+					<label for="gener">*性别:</label>
+					<label class="radioinfo" for="male">男:</label>
+					<input class="radio" type="radio" name="userinfo.gender" value="true" id="male"  checked="checked"/>
+					<label class="radioinfo" for="female">女:</label>
+					<input class="radio" type="radio" name="userinfo.gender" value="false" id="female"  />
+					<label for="" class="error" style="color: red;float:none;">#{error 'userinfo.gender'/}</label>
+				</span>
+				<span>
+					<label for="phoneinput">*电话:</label>
+					<input type="text" name="userinfo.phone" value="${userinfo?.phone}" id="phoneinput" onblur="onBlur(this,'phone');" onfocus="onFocus(this,'phone');"/>
+					<label for="" class="error" style="color: red;float:none;">#{error 'userinfo.phone'/}</label>
+					<label for="#" id="phone" class="remind">请输入正确的电话号码</label>
+				</span>
+				<span>
+					<label for="zipcodeinput">*邮编:</label>
+					<input type="text" name="userinfo.zipCode" value="${userinfo?.zipCode}" id="zipcodeinput" onblur="onBlur(this,'zipcode');" onfocus="onFocus(this,'zipcode');"/>
+					<label for="" class="error" style="color: red;float:none;">#{error 'userinfo.zipCode'/}</label>
+					<label for="#" id="zipcode" class="remind">请输入正确的邮编</label>
+				</span>
+				<span>
+					<label for="addressinput" >*详细地址:</label>
+					<textarea id="addressinput" name="userinfo.address"  onblur="onBlur(this,'address');" onfocus="onFocus(this,'address');">${userinfo?.address}</textarea>
+					<label for="" class="error" style="color: red;float:none;">#{error 'userinfo.address'/}</label>
+					<label for="#" id="address" class="remind">请出入正确的地址</label>
+				</span>
+				<span class="submit">
+					<input type="submit" onclick="verification();"/>
+					<label id="tips" class="tips">(信息不全)</label>
+				</span>
+			</form>
+		</div>
+	

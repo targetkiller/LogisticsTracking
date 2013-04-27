@@ -1,0 +1,357 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/table.title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:text="每月订单统计（表）"
+                android:textSize="23dp" />
+
+            <TableLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:stretchColumns="*" >
+
+                <TableRow
+                    android:background="#000000"
+                    android:paddingLeft="1dp"
+                    android:paddingRight="1dp" >
+
+                    <TextView
+                        android:id="@+id/row1col1"
+                        android:layout_width="10dp"
+                        android:layout_margin="1dp"
+                        android:background="#ffffff"
+                        android:gravity="center"
+                        android:padding="3dip"
+                        android:text="月份"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/row1col2"
+                        android:layout_width="10dp"
+                        android:layout_margin="1dp"
+                        android:background="#ffffff"
+                        android:gravity="center"
+                        android:padding="3dip"
+                        android:text="订单数"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/row1col4"
+                        android:layout_width="10dp"
+                        android:layout_margin="1dp"
+                        android:background="#ffffff"
+                        android:gravity="center"
+                        android:padding="3dip"
+                        android:text="月份"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/row1col4"
+                        android:layout_width="10dp"
+                        android:layout_margin="1dp"
+                        android:background="#ffffff"
+                        android:gravity="center"
+                        android:padding="3dip"
+                        android:text="订单数"
+                        android:textSize="15dp" />
+                </TableRow>
+
+                <TableRow
+                    android:background="#000000"
+                    android:paddingLeft="1dp"
+                    android:paddingRight="1dp" >
+
+                    <TextView
+                        android:id="@+id/row2col1"
+                        android:layout_width="10dp"
+                        android:layout_margin="1dp"
+                        android:background="#ffffff"
+                        android:gravity="center"
+                        android:padding="3dip"
+                        android:text="11"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/row2col2"
+                        android:layout_width="10dp"
+                        android:layout_margin="1dp"
+                        android:background="#ffffff"
+                        android:gravity="center"
+                        android:padding="3dip"
+                        android:text="22"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/row2col4"
+                        android:layout_width="10dp"
+                        android:layout_margin="1dp"
+                        android:background="#ffffff"
+                        android:gravity="center"
+                        android:padding="3dip"
+                        android:text="22"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/row2col4"
+                        android:layout_width="10dp"
+                        android:layout_margin="1dp"
+                        android:background="#ffffff"
+                        android:gravity="center"
+                        android:padding="3dip"
+                        android:text="22"
+                        android:textSize="15dp" />
+                </TableRow>
+
+                <TableRow
+                    android:background="#000000"
+                    android:paddingLeft="1dp"
+                    android:paddingRight="1dp" >
+
+                    <TextView
+                        android:id="@+id/row3col1"
+                        android:layout_width="10dp"
+                        android:layout_margin="1dp"
+                        android:background="#ffffff"
+                        android:gravity="center"
+                        android:padding="3dip"
+                        android:text="11"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/row3col2"
+                        android:layout_width="10dp"
+                        android:layout_margin="1dp"
+                        android:background="#ffffff"
+                        android:gravity="center"
+                        android:padding="3dip"
+                        android:text="22"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/row3col4"
+                        android:layout_width="10dp"
+                        android:layout_margin="1dp"
+                        android:background="#ffffff"
+                        android:gravity="center"
+                        android:padding="3dip"
+                        android:text="22"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/row3col4"
+                        android:layout_width="10dp"
+                        android:layout_margin="1dp"
+                        android:background="#ffffff"
+                        android:gravity="center"
+                        android:padding="3dip"
+                        android:text="22"
+                        android:textSize="15dp" />
+                </TableRow>
+
+                <TableRow
+                    android:background="#000000"
+                    android:paddingLeft="1dp"
+                    android:paddingRight="1dp" >
+
+                    <TextView
+                        android:id="@+id/row4col1"
+                        android:layout_width="10dp"
+                        android:layout_margin="1dp"
+                        android:background="#ffffff"
+                        android:gravity="center"
+                        android:padding="3dip"
+                        android:text="11"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/row4col2"
+                        android:layout_width="10dp"
+                        android:layout_margin="1dp"
+                        android:background="#ffffff"
+                        android:gravity="center"
+                        android:padding="3dip"
+                        android:text="22"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/row4col4"
+                        android:layout_width="10dp"
+                        android:layout_margin="1dp"
+                        android:background="#ffffff"
+                        android:gravity="center"
+                        android:padding="3dip"
+                        android:text="22"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/row4col4"
+                        android:layout_width="10dp"
+                        android:layout_margin="1dp"
+                        android:background="#ffffff"
+                        android:gravity="center"
+                        android:padding="3dip"
+                        android:text="22"
+                        android:textSize="15dp" />
+                </TableRow>
+
+                <TableRow
+                    android:background="#000000"
+                    android:paddingLeft="1dp"
+                    android:paddingRight="1dp" >
+
+                    <TextView
+                        android:id="@+id/row5col1"
+                        android:layout_width="10dp"
+                        android:layout_margin="1dp"
+                        android:background="#ffffff"
+                        android:gravity="center"
+                        android:padding="3dip"
+                        android:text="11"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/row5col2"
+                        android:layout_width="10dp"
+                        android:layout_margin="1dp"
+                        android:background="#ffffff"
+                        android:gravity="center"
+                        android:padding="3dip"
+                        android:text="22"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/row5col4"
+                        android:layout_width="10dp"
+                        android:layout_margin="1dp"
+                        android:background="#ffffff"
+                        android:gravity="center"
+                        android:padding="3dip"
+                        android:text="22"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/row5col4"
+                        android:layout_width="10dp"
+                        android:layout_margin="1dp"
+                        android:background="#ffffff"
+                        android:gravity="center"
+                        android:padding="3dip"
+                        android:text="22"
+                        android:textSize="15dp" />
+                </TableRow>
+
+                <TableRow
+                    android:background="#000000"
+                    android:paddingLeft="1dp"
+                    android:paddingRight="1dp" >
+
+                    <TextView
+                        android:id="@+id/row6col1"
+                        android:layout_width="10dp"
+                        android:layout_margin="1dp"
+                        android:background="#ffffff"
+                        android:gravity="center"
+                        android:padding="3dip"
+                        android:text="11"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/row6col2"
+                        android:layout_width="10dp"
+                        android:layout_margin="1dp"
+                        android:background="#ffffff"
+                        android:gravity="center"
+                        android:padding="3dip"
+                        android:text="22"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/row6col4"
+                        android:layout_width="10dp"
+                        android:layout_margin="1dp"
+                        android:background="#ffffff"
+                        android:gravity="center"
+                        android:padding="3dip"
+                        android:text="22"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/row6col4"
+                        android:layout_width="10dp"
+                        android:layout_margin="1dp"
+                        android:background="#ffffff"
+                        android:gravity="center"
+                        android:padding="3dip"
+                        android:text="22"
+                        android:textSize="15dp" />
+                </TableRow>
+
+                <TableRow
+                    android:background="#000000"
+                    android:paddingLeft="1dp"
+                    android:paddingRight="1dp" >
+
+                    <TextView
+                        android:id="@+id/row7col1"
+                        android:layout_width="10dp"
+                        android:layout_margin="1dp"
+                        android:background="#ffffff"
+                        android:gravity="center"
+                        android:padding="3dip"
+                        android:text="11"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/row7col2"
+                        android:layout_width="10dp"
+                        android:layout_margin="1dp"
+                        android:background="#ffffff"
+                        android:gravity="center"
+                        android:padding="3dip"
+                        android:text="22"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/row7col4"
+                        android:layout_width="10dp"
+                        android:layout_margin="1dp"
+                        android:background="#ffffff"
+                        android:gravity="center"
+                        android:padding="3dip"
+                        android:text="22"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/row7col4"
+                        android:layout_width="10dp"
+                        android:layout_margin="1dp"
+                        android:background="#ffffff"
+                        android:gravity="center"
+                        android:padding="3dip"
+                        android:text="22"
+                        android:textSize="15dp" />
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

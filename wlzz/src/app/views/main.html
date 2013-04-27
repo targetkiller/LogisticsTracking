@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <head>
+        <title>#{get 'title' /}</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+        #{get 'moreStyles'/}
+        <link rel="stylesheet" href="@{'/public/stylesheets/common.css'}" />
+        <link rel="stylesheet" href="@{'/public/stylesheets/layout.css'}" />
+        <link rel="shortcut icon" type="image/png" href="@{'/public/images/favicon.png'}">
+            <script src="@{'/public/javascripts/jquery-1.6.4.min.js'}" type="text/javascript" charset="${_response_encoding}"></script>
+            #{get 'moreScripts' /}
+    </head>
+    <body onload="ini();">
+    <div class="header">
+        <p>你好，欢迎${controllers.Users.getUserName(play.mvc.Controller.session.get("user_id"))}来到物流追踪系统!  #{if play.mvc.Controller.session.get("login").equals("true")}<a href="@{Application.signOut}"> [退出]</a>#{/if}#{else}<a href="@{Application.login}"> [登录]</a>#{/else}</p>
+    </div>
+    <div class="main">
+        #{doLayout /}
+    </div>    
+        <div class="footer">
+            <p>CopyRight &copy; 华南农业大学信息学院软件学院HCI学生工作室</p>
+        </div>
+    </body>
+</html>

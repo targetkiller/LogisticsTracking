@@ -1,0 +1,74 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     >
+
+
+        <RelativeLayout
+            android:background="@drawable/default_bg"
+            android:id="@+id/you"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            >
+
+            <ImageView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="15dp"
+                android:background="@drawable/dingdanchaxun" />
+
+            <ImageView
+                android:id="@+id/backgroundmanage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/title"
+                android:layout_below="@+id/title"
+                android:layout_marginRight="15dp"
+                android:clickable="true"
+                android:src="@drawable/backgroundmanage" >
+            </ImageView>
+
+            <RelativeLayout
+                android:id="@+id/inputanbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/backgroundmanage"
+                android:layout_centerHorizontal="true"
+                android:paddingTop="10dp" >
+
+                <EditText
+                    android:id="@+id/code"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/code_input"
+                    android:ems="11"
+                    android:gravity="center_vertical"
+                    android:hint="请输入订单号....."
+                    android:padding="10dp"
+                    android:singleLine="true" />
+
+                <ImageButton
+                    android:id="@+id/seek"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:layout_toRightOf="@+id/code"
+                    android:background="@drawable/seekpic" />
+            </RelativeLayout>
+
+            <ExpandableListView
+                android:id="@+id/listview"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/inputanbutton"
+                android:layout_marginTop="10dp"
+                android:background="@null"
+                android:cacheColorHint="#00000000"
+                android:drawSelectorOnTop="false" >
+            </ExpandableListView>
+        </RelativeLayout>
+   
+
+</LinearLayout>

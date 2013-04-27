@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+  
+    <item android:id="@+id/user_face_drawable" 
+        android:drawable="@drawable/h003"
+         android:layout_centerInParent="true" 
+       />
+</layer-list>

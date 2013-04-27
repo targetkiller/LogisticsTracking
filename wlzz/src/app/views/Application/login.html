@@ -1,0 +1,30 @@
+#{extends 'main.html'/}
+#{set 'moreStyles'}
+	<link rel="stylesheet" href="@{'/public/stylesheets/register.css'}" type="text/css"/>
+#{/set}
+#{set 'moreScripts'}
+	<script type="text/javascript" src="@{'/public/javascripts/input.js'}"></script>
+#{/set}
+#{set title:'登录'/}
+
+
+	
+		<form action="@{Application.loginProcesser}" method="post">
+			<h1>登陆</h1>
+			${errorMessage}
+			<span>
+				<label for="account">用户账号:</label>
+				<input type="text" name="account" id="account" onblur="onBlur(this);" onfocus="onFocus(this);"/>
+				<span class="error">#{error 'account'/}</span>
+			</span>
+			<span>
+				<label for="password">密码 :</label>
+				<input type="password" name="password" id="password" onblur="onBlur(this);" onfocus="onFocus(this);"/>
+				<span class="error">#{error 'password'/}</span>
+			</span>
+			<input type="submit" />
+			<a href="#">忘记密码</a>
+		</form>
+		<img src="@{'/public/images/banner.jpg'}" alt="" />
+	
+	

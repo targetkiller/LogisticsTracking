@@ -1,0 +1,48 @@
+#overall{
+	background-color:#000000;
+	opacity: 0.3;
+	filter:alpha(opacity=30);  
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	visibility: hidden;
+	z-index: 10001;
+}
+#alert{
+	position: absolute;
+	z-index: 10001;
+	background-color: #ffffff;
+	width: 400px;
+	height: 200px;
+	border: 5px solid #3F73EB;
+	visibility: hidden;
+}
+span{
+	display: block;
+	margin: 15px auto 0px 100px;
+}
+label{
+	height: 25px;
+	line-height: 25px;
+	font-size: 16px;
+}
+input{
+	width: 180px;
+	height: 25px;
+}
+
+.account{
+	margin: 35px auto 0px 100px;
+}
+.button button{
+	margin: 15px auto 0px 20px;
+	width: 70px;
+	height: 30px
+}
+.logo{
+	position:absolute;
+	z-index: 10001;
+	width: 100px;
+	height: 100px;
+	visibility: hidden;
+}

@@ -1,0 +1,15 @@
+1.布局不合适各种手机
+2.ButtonListener要修改
+3.字体，padding没有统一
+4.字体格式没有统一
+5.child_list.xml group_list.xml等有多余的layout
+6.ExpandAdapter这个类这里有个hashmap那里的命名有问题,java里面命名方法是小驼峰法，而xml因为不能用大写，所以2个单词之间要"-"
+7.有多个expandableList,而且adapter跟listener是比较相似的，可以封装出来
+8.menu可以用xml来定义好来减低耦合性
+9.OrderInfo这个activity布局不合适，组件都定死了大小，在其他手机上不合适
+10.ToolView我加了点注释下去，你可以按注释改下
+11.Search那里又有命名不规则,menu的问题，有多余没用的带代码,dialog也可以用xml文件定义，这里的代码相当之混乱
+12.有很多menu的使用，所以menu也可以封装下
+13.StationInfo和StationLookInfo那里的ButtonListener那里改改会比较简洁
+14.StationManagerList的dialog同上
+15.VerifyCode定位错误，应该是按比例计算，而不是固定的坐标

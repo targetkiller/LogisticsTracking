@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<link rel="stylesheet" href="../css/information.css" />
+	<link rel="stylesheet" href="../css/common.css" />
+	<link rel="stylesheet" href="../css/mode.css" />
+	<script type="text/javascript" src="../js/information.js"></script>
+	<title>个人信息</title>
+</head>
+<body>
+	<div class="header"><p>你好，欢迎来到物流追踪系统!</p></div>
+	<div class="main">
+		<div class="title">
+			<img src="../image/title.png" alt="#" />
+		</div>
+		<div class="functionbar">
+			<ul>全部功能
+				<li><img src="../image/point.gif" alt="#" /> 个人信息</li>
+				<li><img src="../image/point.gif" alt="#" /> 查询订单</li>
+			</ul>
+		</div>
+		<div class="content">
+			<div class="infobar">
+				<p>
+					<strong>个人信息</strong> (用*标记的信息是十分重要的信息)
+				</p>
+			</div>
+			<form action="#">
+				<span>
+					<label for="account">用户账号:</label> 
+					<label for="#" id="account">noonnightstorm</label>
+				</span>
+				<span>
+					<label for="nicknameinput">*昵称:</label>
+					<input type="text" id="nicknameinput" onblur="onBlur(this,'nickname');" onfocus="onFocus(this,'nickname');"/> 
+					<label for="#" id="nickname" class="remind">请输入正确的昵称</label>
+				</span>
+				<span>
+					<label for="role">角色:</label> 
+					<label for="#" id="role">超级管理员</label>
+				</span>
+				<span>
+					<label for="mailinput">*邮箱:</label>
+					<input type="text" id="mailinput" onblur="onBlur(this,'mail');" onfocus="onFocus(this,'mail');"/>
+					<label for="#" id="mail" class="remind">请输入正确的邮箱</label>
+				</span>
+				<span>
+					<label for="ageinput">年龄:</label>
+					<input type="text" id="ageinput" onblur="onBlur(this,'age');" onfocus="onFocus(this,'age');"/>
+					<label for="#" id="age" class="remind">请输入正确的年龄</label>
+				</span>
+				<span>
+					<label for="gener">性别:</label>
+					<label class="radioinfo" for="male">男:</label>
+					<input class="radio" type="radio" name="gender" value="male" id="male"/>
+					<label class="radioinfo" for="female">女:</label>
+					<input class="radio" type="radio" name="gender" value="female" id="female"/>
+				</span>
+				<span>
+					<label for="phoneinput">*电话:</label>
+					<input type="text" id="phoneinput" onblur="onBlur(this,'phone');" onfocus="onFocus(this,'phone');"/>
+					<label for="#" id="phone" class="remind">请输入正确的电话号码</label>
+				</span>
+				<span>
+					<label for="zipcodeinput">*邮编:</label>
+					<input type="text" id="zipcodeinput" onblur="onBlur(this,'zipcode');" onfocus="onFocus(this,'zipcode');"/>
+					<label for="#" id="zipcode" class="remind">请输入正确的邮编</label>
+				</span>
+				<span>
+					<label for="addressinput" >*详细地址:</label>
+					<textarea id="addressinput" onblur="onBlur(this,'address');" onfocus="onFocus(this,'address');"></textarea>
+					<label for="#" id="address" class="remind">请出入正确的地址</label>
+				</span>
+				<span class="submit">
+					<input type="submit" />
+				</span>
+			</form>
+		</div>
+	</div>
+	<div class="footer">
+		<p>CopyRight &copy; 2011 sudo.cn All Rights Reserved</p>
+		<p><a href="#">System Introduction</a>&brvbar;
+		<a href="#">Contact Us</a>&brvbar;
+		<a href="#">Manage</a></p>
+	</div>
+</body>
+</html>

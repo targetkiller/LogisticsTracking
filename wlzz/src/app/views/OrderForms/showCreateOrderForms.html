@@ -1,0 +1,79 @@
+#{extends 'main_title_bar.html'/}
+#{set title:'订单管理'/}
+
+#{set 'moreStyles'}
+<link rel="stylesheet" href="@{'/public/stylesheets/checkOrderList.css'}" />
+<link rel="stylesheet" href="@{'/public/stylesheets/bar.css'}" />
+#{/set}
+#{set 'moreScripts'}
+<script type="text/javascript" src="@{'/public/javascripts/searchInput.js'}"></script>
+#{/set}
+    <div class="orderlist">
+        <div class="infobar">
+            <span><strong>订单列表</strong></span>
+            <span class="inputbar">
+                <form action="@{OrderForms.searchByCode}" method="post">
+                    <button type="submit">搜索</button>
+                    <input type="text" value="请输入搜索条件搜索订单" name="code" id="input" onblur="blurValue();" onfocus="fcousValue();"/>    
+                </form>
+            </span>
+        </div>
+        <div class="table">
+            <table>
+                <th>目的地</th>
+                <th>邮编</th>
+                <th>订单号</th>
+                <th>条形码</th>
+                <th>用户昵称</th>        
+                <th>创建的工作站</th>
+                <th>查看</th>
+                <th>更新</th>
+                <th>删除</th>
+                #{list items:allOrderForm,as:'orderForm'}
+                <tr #{if orderForm_index%2 == 0}class="double"#{/if}#{else}class="single"#{/else}>                
+                    <td>${orderForm.address}</td>
+                    <td>${orderForm.zipCode}</td>
+                    <td>${orderForm.code}</td>
+                    <td>${orderForm.barcode}</td>
+                    <td>${orderForm.userName}</td>
+                    <td>${orderForm.station.name}</td>
+                    <td><a href="@{OrderForms.show(orderForm.id)}">查看</a> </td>
+                    <td><a href="@{OrderForms.updateById(orderForm.id)}">编辑</a> </td>
+                    <td><a href="@{OrderForms.delete(orderForm.id)}">删除</a> </td>
+                </tr>
+                #{/list}
+            </table>
+            <div class="page">	
+                #{if page > 1}<span><a href="@{OrderForms.showCreateOrderForms(1)}">首页</a></span>#{/if}#{else}<span><a href="#">首页</a></span>#{/else}
+                #{if page > 1}<span><a href="@{OrderForms.showCreateOrderForms(page-1)}">上一页</a></span>#{/if}#{else}<span><a href="#">上一页</a></span>#{/else}
+
+                #{list items:pageList,as:'pagelist'}
+                #{if page == pagelist }
+                <span>${page}</span>
+                #{/if}
+                #{else}
+                <span><a href="@{OrderForms.showCreateOrderForms(pagelist)}">${pagelist}</a></span>
+                #{/else}
+                #{/list}
+
+                #{if page < allPage}<span><a href="@{OrderForms.showCreateOrderForms(page+1)}">下一页</a></span>#{/if}#{else}<span><a href="#">下一页</a></span>#{/else}
+                #{if page < allPage}<span><a href="@{OrderForms.showCreateOrderForms(allPage)}">尾页</a></span>#{/if}#{else}<span><a href="#">尾页</a></span>#{/else}
+            </div>
+        </div> 
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

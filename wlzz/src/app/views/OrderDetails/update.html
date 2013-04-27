@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<link rel="stylesheet" href="/public/css/modifyOrder.css" />
+	<link rel="stylesheet" href="/public/css/common.css" />
+	<link rel="stylesheet" href="/public/css/mode.css" />
+	<script type="text/javascript" src="/public/js/information.js"></script>
+	<title>Information</title>
+</head>
+<body>
+	<div class="header"><p>你好，欢迎来到物流追踪系统!(不知道这个页面会不会用上。。。)</p></div>
+	<div class="main">
+		<div class="title">
+			<img src="/public/image/title.png" alt="#" />
+		</div>
+		<div class="functionbar">
+			<ul>全部功能
+				<li><a href="@{OrderDetails.index}"><img src="/public/image/point.gif" alt="#" /> 显示全部</a></li>
+				<li><a href="@{Application.goTo('OrderDetails','add.html')}"><img src="/public/image/point.gif" alt="#" /> 增加记录</a></li>
+			</ul>
+		</div>
+		<div class="content">
+			<div class="infobar">
+				<p>
+					<strong>订单信息</strong> 
+				</p>
+			</div>
+			<form action="@{OrderDetails.add}">
+				<span>
+					<label for="orderformidinput">订单id:</label> 
+					<input type="text" name="orderFormId" id="orderformidinput" onblur="onBlur(this,'orderformid');" onfocus="onFocus(this,'orderformid');"/> 
+					
+				</span>
+				<span>
+					<label for="stationidinput">工作站id:</label>
+					<input type="text" name="stationId" id="stationidinput" onblur="onBlur(this,'stationid');" onfocus="onFocus(this,'stationid');"/> 
+					
+				</span>
+				<span>
+					<label for="useridinput">用户id:</label> 
+					<input type="text" name="userId" id="useridinput" onblur="onBlur(this,'userid');" onfocus="onFocus(this,'userid');"/> 
+					
+				</span>
+				<span>
+					<label for="nextstationidinput">下一站id:</label>
+					<input type="text" name="nextStationId" id="nextstationtidinput" onblur="onBlur(this,'neststationid');" onfocus="onFocus(this,'nextstationid');"/>
+					
+				</span>
+				<span>
+					<label for="updatetimeinput">更新时间:</label>
+					<input type="text" name="updateTime" id="updatetimeinput" onblur="onBlur(this,'updatetime');" onfocus="onFocus(this,'updatetime');"/>
+					
+				</span>
+				<span>
+					<label for="descriptioninpute">描述:</label>
+					<input type="text" name="description" id="descriptioninpute" onblur="onBlur(this,'description');" onfocus="onFocus(this,'description');"/>
+					
+				</span>
+				
+				<span class="submit">
+					<input type="submit" />
+				</span>
+			</form>
+		</div>
+	</div>
+	<div class="footer">
+		<p>CopyRight &copy; 2011 sudo.cn All Rights Reserved</p>
+		<p><a href="#">System Introduction</a>&brvbar;
+		<a href="#">Contact Us</a>&brvbar;
+		<a href="#">Manage</a></p>
+	</div>
+</body>
+</html>

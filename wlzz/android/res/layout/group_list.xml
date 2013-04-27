@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@null">
+
+    <LinearLayout
+        android:id="@+id/group_list.title1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:layout_marginTop="8dp"
+        android:background="@null">
+
+        <TextView
+            android:id="@+id/group_list.time.title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:text="时间："
+            android:textSize="18dp" 
+            android:background="@null"/>
+
+        <TextView
+            android:id="@+id/group_list.time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="201101010101"
+            android:textSize="18dp" 
+            android:background="@null"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/group_list.title2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:layout_marginTop="8dp"
+        android:background="@null">
+
+        <TextView
+            android:id="@+id/group_list.now.title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:text="工作站："
+            android:textSize="18dp" 
+            android:background="@null"/>
+
+        <TextView
+            android:id="@+id/group_list.now"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textSize="18dp" 
+            android:background="@null"/>
+    </LinearLayout>
+
+</LinearLayout>

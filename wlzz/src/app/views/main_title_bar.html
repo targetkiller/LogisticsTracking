@@ -1,0 +1,89 @@
+#{extends 'main_title.html'/}
+	 <div class="functionbar">  
+        <div class="my_left_category">
+
+
+            <div class="h2_cat" onmouseover="this.className='h2_cat active_cat'" onmouseout="this.className='h2_cat'">
+                <h3>个人资料管理</h3>
+                <div class="h3_cat">
+                    <div class="shadow">
+                        <div class="shadow_border">
+                            <ul>
+                                <li> <a href="@{UserInfos.showById(play.mvc.Controller.session.get('user_id'))}">个人信息</a></li>
+                                #{if play.mvc.Controller.session.get("role")!=null&&!play.mvc.Controller.session.get("role").equals("user")}
+                                <li><a href="@{Application.goTo('Users','changePassword.html')}?account=${controllers.Users.getUserAccount(play.mvc.Controller.session.get('user_id'))}&fromPath='个人资料管理'">修改密码</a></li>
+                            	#{/if}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            #{if "root".equals(play.mvc.Controller.session.get("role"))}
+            <div class="h2_cat" onmouseover="this.className='h2_cat active_cat'" onmouseout="this.className='h2_cat'">
+                <h3>角色管理</h3>
+                <div class="h3_cat">
+                    <div class="shadow">
+                        <div class="shadow_border">
+                            <ul>
+                                <li> <a href="@{Roles.index}">首页</a></li>
+                                <li><a href="@{Application.goTo('Roles','add.html')}">增加角色</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="h2_cat" onmouseover="this.className='h2_cat active_cat'" onmouseout="this.className='h2_cat'">
+                <h3>站台管理</h3>
+                <div class="h3_cat">
+                    <div class="shadow">
+                        <div class="shadow_border">
+                            <ul>
+                                <li> <a href="@{Stations.index}">首页</a></li>
+                                <li><a href="@{Application.goTo('Stations','add.html')}">增加站台</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="h2_cat" onmouseover="this.className='h2_cat active_cat'" onmouseout="this.className='h2_cat'">
+                <h3>用户管理</h3>
+                <div class="h3_cat">
+                    <div class="shadow">
+                        <div class="shadow_border">
+                            <ul>
+                                <li> <a href="@{Users.index}">首页</a></li>
+                                <li><a href="@{Application.goTo('Users','add.html')}">增加用户</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            #{/if}
+
+
+            <div class="h2_cat" onmouseover="this.className='h2_cat active_cat'" onmouseout="this.className='h2_cat'">
+                <h3>订单管理</h3>
+                <div class="h3_cat">
+                    <div class="shadow">
+                        <div class="shadow_border">
+                            <ul>
+                                <li><a href="@{Application.goTo('OrderForms','checkOrder.html')}"> 查询订单</a></li>
+                                #{if ("root".equals(play.mvc.Controller.session.get("role"))||"station_manager".equals(play.mvc.Controller.session.get("role")))}    
+                                <li><a href="@{OrderForms.showCreateOrderForms}"> 所创建的订单</a></li>
+                                <li><a href="@{OrderForms.index}"> 所有订单</a></li>
+                                <li><a href="@{OrderForms.showFinishOrderForms}">已处理订单</a></li>
+                                <li><a href="@{OrderForms.showNoFinishOrderForms}"> 未处理订单</a></li>
+                                <li><a href="@{OrderForms.addfirst}"> 添加订单</a></li>
+                                #{if ("root".equals(play.mvc.Controller.session.get("role")))}
+                                <li><a href="@{Root.orderCount}"> 订单统计</a></li>
+                                #{/if}
+                                #{/if}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        </div>
+    </div>
+#{doLayout /}

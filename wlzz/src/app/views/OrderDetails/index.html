@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<link rel="stylesheet" href="/public/css/common.css" />
+	<link rel="stylesheet" href="/public/css/mode.css" />
+	<link rel="stylesheet" href="/public/css/checkOrderList.css" />
+	<script type="text/javascript" src="/public/js/searchInput.js"></script>
+	<title></title>
+</head>
+<body>
+
+#{extends 'main_title.html'/}
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx不知道这个页面会不会用上。。
+	
+	<div class="main">
+		<div class="title">
+			<img src="/public/image/title.png" alt="#" />
+		</div>
+		<div class="functionbar">
+			<ul>全部功能
+				<li><a href="@{Application.goTo('OrderDetails','add.html')}"><img src="/public/image/point.gif" alt="#" /> 增加记录</a></li>
+			</ul>
+		</div>
+		<div class="orderlist">
+			<div class="infobar">
+				<span><strong>订单细节列表</strong></span>
+				<span class="inputbar">
+					<input type="text" value="请输入搜索条件搜索订单" id="input" onblur="blurValue();" onfocus="fcousValue();"/>
+					<button>搜索</button>
+				</span>
+			</div>
+			 <div class="table">
+				<table>
+					<th>订单id</th>
+					<th>站台id</th>
+					<th>用户id</th>
+					<th>下一站id</th>
+					<th>更新时间</th>
+					<th>描述</th>
+					<th>查看</th>
+					<th>编辑</th>
+					<th>删除</th>
+					 #{list items:allOrderDetail,as:'orderDetail'}
+					<tr class="single">
+						<td>${orderDetail.orderFormId}</td>
+						<td>${orderDetail.stationId}</td>
+						<td>${orderDetail.userId}</td>
+						<td>${orderDetail.nextStationId}</td>
+						<td>${orderDetail.updateTime}</td>
+						<td>${orderDetail.description}</td>
+						<td><a href="@{OrderDetails.show(orderDetail.id)}">查看</a> </td>
+						<td><a href="@{OrderDetails.updatePrepare(orderDetail)}">编辑</a> </td>
+						<td><a href="@{OrderDetails.delete(orderDetail.id)}">删除</a> </td>
+					</tr>
+					#{/list}
+					
+				</table>
+				<div class="page">
+					<span><a href="#">上一页</a></span>
+					<span><a href="#">1</a></span>
+					<span><a href="#">2</a></span>
+					<span><a href="#">3</a></span>
+					<span><a href="#">4</a></span>
+					<span><a href="#">5</a></span>
+					<span><a href="#">6</a></span>
+					<span>......</span>
+					<span><a href="#">35</a></span>
+					<span><a href="#">下一页</a></span>
+				</div>
+			</div> 
+		</div>
+	</div>
+	<div class="footer">
+		<p>CopyRight &copy; 2011 sudo.cn All Rights Reserved</p>
+		<p><a href="#">System Introduction</a>&brvbar;
+		<a href="#">Contact Us</a>&brvbar;
+		<a href="#">Manage</a></p>
+	</div>
+</body>
+</html>

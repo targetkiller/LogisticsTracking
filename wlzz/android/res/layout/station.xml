@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/loginRoot"
+	android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:id="@+id/LinearLayoutStation1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:background="@drawable/default_bg"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/RelativeLayoutStation2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp" >
+
+            <ImageView
+                android:id="@+id/StationfaceImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/login_head2" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/RelativeLayoutStation3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15.0px"
+            android:layout_marginRight="15.0px"
+            android:background="@drawable/login_back"
+            android:paddingBottom="5.0px"
+            android:paddingTop="21.0px" >
+
+            <EditText
+                android:id="@+id/Stationlogin_edit_account"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="5.0px"
+                android:layout_marginLeft="5.0dip"
+                android:layout_marginRight="5.0dip"
+                android:layout_marginTop="5.0dip"
+                android:layout_toRightOf="@+id/StationfaceImg"
+                android:background="@drawable/qq_edit_login"
+                android:hint="@string/strInputAccHint"
+                android:inputType="number"
+                android:maxLength="10"
+                android:paddingLeft="45.0sp"
+                android:saveEnabled="true" />
+
+            <TextView
+                android:id="@+id/StationTextView01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/Stationlogin_edit_account"
+                android:layout_alignLeft="@+id/Stationlogin_edit_account"
+                android:layout_alignTop="@+id/Stationlogin_edit_account"
+                android:layout_marginRight="15.0sp"
+                android:gravity="center_vertical"
+                android:paddingLeft="7.0sp"
+                android:text="@string/strAccInputLabel"
+                android:textColor="#ff3f3f3f"
+                android:textSize="16.0dip" />
+
+            <ImageButton
+                android:id="@+id/StationImageButton02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/Stationlogin_edit_account"
+                android:layout_alignRight="@+id/Stationlogin_edit_account"
+                android:layout_alignTop="@+id/Stationlogin_edit_account"
+                android:layout_marginRight="1.0dip"
+                android:background="@drawable/more_select" />
+
+            <EditText
+                android:id="@+id/Stationlogin_edit_pwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/Stationlogin_edit_account"
+                android:layout_alignRight="@+id/Stationlogin_edit_account"
+                android:layout_below="@+id/Stationlogin_edit_account"
+                android:layout_marginRight="1.0dip"
+                android:background="@drawable/qq_edit_login"
+                android:inputType="textPassword"
+                android:maxLength="16"
+                android:paddingLeft="45.0sp"
+                android:saveEnabled="true" />
+
+            <TextView
+                android:id="@+id/StationTextView02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/Stationlogin_edit_pwd"
+                android:layout_alignRight="@+id/StationTextView01"
+                android:layout_alignTop="@+id/Stationlogin_edit_pwd"
+                android:gravity="center_vertical"
+                android:paddingLeft="7.0sp"
+                android:text="@string/strPswInputLabel"
+                android:textColor="#ff3f3f3f"
+                android:textSize="16.0dip" />
+
+            <Button
+                android:id="@+id/Stationlogin_btn_login"
+                android:layout_width="130.0px"
+                android:layout_height="72.0px"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/StationTextView02"
+                android:layout_marginRight="12.0dip"
+                android:layout_marginTop="7.0px"
+                android:text="@string/login" />
+        </RelativeLayout>
+    </LinearLayout>
+
+		</LinearLayout>

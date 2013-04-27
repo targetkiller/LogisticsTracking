@@ -1,0 +1,46 @@
+<resources>
+
+    <string name="app_name">物流追踪系统</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_login">login</string>
+    <string name="welcomeback">  欢迎回来! </string>
+    <string name="strInputAccHint">输入帐号</string>
+    <string name="strAccInputLabel">帐号</string>
+    <string name="confirm">    确认    </string>
+    <string name="cancel">    取消    </string>
+    <string name="edit">    修改    </string>
+    <string name="stationname">工作站名: </string>
+    <string name="stationaccount">工作站帐号: </string>
+    <string name="stationpassword">工作站密码: </string>
+    <string name="stationaddress">工作站地址: </string>
+    <string name="stationphone">工作站电话: </string>
+    <string name="stationonlyone">同时登陆人数: </string>
+    
+    <string name="username">名字: </string>
+    <string name="useremail">邮件: </string>
+    <string name="userage">年龄: </string>
+    <string name="usergender">性别: </string>
+    <string name="userphone">电话: </string>
+    <string name="userzipcode">邮政编码: </string>
+    <string name="useraddress">家庭地址: </string>
+    
+    <string name="ordername">订单号: </string>
+    <string name="orderaddress">来源地: </string>
+    <string name="orderzipcode">来源地邮政编码: </string>
+    <string name="ordercontent">订单详请: </string>
+    <string name="orderamount">数量: </string>
+    <string name="orderweight">重量: </string>
+    <string name="ordercode">编号: </string>
+    <string name="orderbarcode"> 条形码: </string>
+    <string name="ordercreatetime">创建时间: </string>
+    <string name="orderusername">订单用户名: </string>
+    <string name="orderuserid">用户ID: </string>
+    <string name="strPswInputLabel">密码</string>
+    <string name="opt_remember">记住密码</string>
+    <string name="opt_automatic">自动登录</string>
+    <string name="backgroundmanage">后台管理</string>
+    <string name="login">登 录</string>
+    <string name="save">保存</string>
+
+</resources>

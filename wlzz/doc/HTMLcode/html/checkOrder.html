@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<link rel="stylesheet" href="../css/common.css" />
+	<link rel="stylesheet" href="../css/checkOrder.css" />
+	<script type="text/javascript" src="../js/action.js"></script>
+	<script type="text/javascript" src="../js/checkOrder.js"></script>
+	<title>查询订单</title>
+</head>
+<body>
+	<div class="header"><p>你好，欢迎来到物流追踪系统</p></div>
+	<div class="main">
+		<div class="title">
+			<img src="../image/title.png" alt="#" />
+		</div>
+		<div class="functionbar">
+			<ul>全部功能
+				<li><img src="../image/point.gif" alt="#" /> 个人信息</li>
+				<li><img src="../image/point.gif" alt="#" /> 查询订单</li>
+			</ul>
+		</div>
+		<div id="content" class="content">
+			<div class="infobar"><strong>查询订单</strong> </div>
+			<form action="#">
+				<div class="input">
+					<span>
+						<label for="#">订单号:</label>
+						<input type="text" onblur="onBlur(this);" onfocus="onFocus(this);"/>
+						<label for="#" class="tips">例如，您可以输入：</label>
+					</span>
+					<span>
+						<label for="#">检验码:</label>
+						<input type="text" onblur="onBlur(this);" onfocus="onFocus(this);"/>
+						<label for="#" class="tips">xxxxxxxx</label>
+					</span>
+					<span>
+						<button class="btn" type="submit" onclick="showResult();">查询</button>
+					</span>
+				</div>
+				<div id="explain" class="explain" >
+					<span>操作建议：</span>
+					<span>1、请核对您手中的单号是否为EMS快递单号；</span>
+					<span>2、EMS单号开头和结尾2位是字母，中间是9位数字；</span>
+					<span>3、应用数据均来自EMS快递官方网站，历史单号一段时间后会失效；</span>
+					<span>4、如果您有什么疑问请登录xxxxxxxxxxxxxx咨询！</span>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="footer">
+		<p>CopyRight &copy; 2011 sudo.cn All Rights Reserved</p>
+		<p><a href="#">System Introduction</a>&brvbar;
+		<a href="#">Contact Us</a>&brvbar;
+		<a href="#">Manage</a></p>
+	</div>
+</body>
+</html>

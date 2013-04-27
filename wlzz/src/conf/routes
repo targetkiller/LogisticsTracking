@@ -1,0 +1,86 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+*	    /?                                     			    Application.index
+GET		/Application/goto/{controller}/{page}				Application.goTo
+GET		/login												Application.login
+GET		/signup 											Application.signUp
+* 		/application/loginprocesser/                        Application.loginProcesser
+GET		/Application/signOut								Application.signOut
+POST	/Application/secondLoginProcesser					Application.secondLoginProcesser
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+# Stations 	
+
+GET		/Stations/show/{id}				Stations.show
+GET		/Stations/?   					Stations.index
+POST	/Stations/add/{id}				Stations.add
+GET		/Stations/delete/{id}			Stations.delete
+POST	/Stations/updata/{id}			Stations.updataById
+
+
+#	StationManagers
+POST	/StationManagers/add/{stationId} 						StationManagers.add
+GET		/StationManagers/delete/{stationId}/{managerId}			StationManagers.delete
+
+
+
+#	OrderForms
+GET		/OrderForms/? 				OrderForms.index
+POST	/OrderForms/add/{id}		OrderForms.add
+GET		/OrderForms/delete/{id}   	OrderForms.delete
+GET		/OrderForms/show/{id}		OrderForms.show
+POST	/OrderForms/updata/{id}  	OrderForms.updataById
+GET     /captcha                                               Application.captcha
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ROOT
+GET				/Root/createStation								Root.createStation
+GET				/Root/allStation								Root.allStation
+GET				/Root/orderCount								Root.orderCount
+POST            /Root/chartOrder								Root.chartOrder	
+#被调用
+POST            /Root/orderInfoS							Root.orderInfoS         
+#被调用
+POST            /Root/orderNumCount								Root.orderNumCount
+#---------------------------------------------------------------------------~~~~~~~~~~~~~~~~~~~~~~~ROOT
+# Users
+#POST			/continue									Users.signUpProcesser	
+GET				/Users/index/?								Users.index
+POST			/Users/add									Users.add
+GET				/Users/delete/{account}						Users.delete
+POST			/Users/changePassword/{account}				Users.changePassword	
+
+# UserInfos
+GET 			/UserInfos/show/{account}					UserInfos.showByAccount	
+GET 			/UserInfos/showById/{user_id}				UserInfos.showById		
+POST			/UserInfos/add								UserInfos.add		
+GET				/UserInfos/updateByAccount/{account}		UserInfos.updateByAccount
+
+
+
+#Roles
+GET			/Roles/index								Roles.index
+POST		/Roles/add/{id}								Roles.add
+GET			/Roles/delete/{id}							Roles.delete
+GET			/Roles/updateById/{id}						Roles.updateById
+POST		/Roles/update/{id}							Roles.update
+GET			/Roles/show/{name}							Roles.show	
+
+#---------------------------------------------------------------------------
+
+
+
+# Ignore favicon requests
+GET     /favicon.ico                            404
+
+# Map static resources from the /app/public folder to the /public path
+GET     /public/                                staticDir:public
+GET     /cacheForChart/                         staticDir:cacheForChart
+# Catch all
+*       /{controller}/{action}                  {controller}.{action}
+
+
+
+

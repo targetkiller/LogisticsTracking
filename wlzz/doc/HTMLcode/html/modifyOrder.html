@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<link rel="stylesheet" href="../css/modifyOrder.css" />
+	<link rel="stylesheet" href="../css/common.css" />
+	<link rel="stylesheet" href="../css/mode.css" />
+	<script type="text/javascript" src="../js/information.js"></script>
+	<title>Information</title>
+</head>
+<body>
+	<div class="header"><p>你好，欢迎来到物流追踪系统!</p></div>
+	<div class="main">
+		<div class="title">
+			<img src="../image/title.png" alt="#" />
+		</div>
+		<div class="functionbar">
+			<ul>全部功能
+				<li><img src="../image/point.gif" alt="#" /> 个人信息</li>
+				<li><img src="../image/point.gif" alt="#" /> 查询订单</li>
+			</ul>
+		</div>
+		<div class="content">
+			<div class="infobar">
+				<p>
+					<strong>订单信息</strong> 
+				</p>
+			</div>
+			<form action="#">
+				<span>
+					<label for="nickenameinput">昵称:</label> 
+					<input type="text" id="nicknameinput" onblur="onBlur(this,'nickname');" onfocus="onFocus(this,'nickname');"/> 
+					<label for="#" id="nickname" class="remind">请输入正确的昵称</label>
+				</span>
+				<span>
+					<label for="zipcodeinput">邮编:</label>
+					<input type="text" id="zipcodeinput" onblur="onBlur(this,'zipcode');" onfocus="onFocus(this,'zipcode');"/> 
+					<label for="#" id="zipcode" class="remind">请输入正确的邮编</label>
+				</span>
+				<span>
+					<label for="numberinput">数量:</label> 
+					<input type="text" id="numberinput" onblur="onBlur(this,'number');" onfocus="onFocus(this,'number');"/> 
+					<label for="#" id="number" class="remind">请输入正确的数量</label>
+				</span>
+				<span>
+					<label for="weightinput">重量:</label>
+					<input type="text" id="weightinput" onblur="onBlur(this,'weight');" onfocus="onFocus(this,'weight');"/>
+					<label for="#" id="weight" class="remind">请输入正确的重量(以kg为单位)</label>
+				</span>
+				<span>
+					<label for="idinput">订单号:</label>
+					<input type="text" id="idinput" onblur="onBlur(this,'id');" onfocus="onFocus(this,'id');"/>
+					<label for="#" id="id" class="remind">请输入正确的订单号</label>
+				</span>
+				<span>
+					<label for="barcode">条形码:</label>
+					<input type="text" id="barcodeinput" onblur="onBlur(this,'barcode');" onfocus="onFocus(this,'barcode');"/>
+					<label for="#" id="barcode" class="remind">请输入正确的条形码</label>
+				</span>
+				<span>
+					<label for="createtimeinput">创建时间:</label>
+					<input type="text" id="createtimeinput" onblur="onBlur(this,'createtime');" onfocus="onFocus(this,'createtime');"/>
+					<label for="#" id="createtime" class="remind">请输入正确的创建时间</label>
+				</span>
+				<span class="textarea">
+					<label for="addressinput" >详细地址:</label>
+					<textarea id="addressinput" onblur="onBlur(this,'address');" onfocus="onFocus(this,'address');"></textarea>
+					<label for="#" id="address" class="remind">请出入正确的地址</label>
+				</span>
+				<span>
+					<label for="contentinput" >具体内容:</label>
+					<textarea id="contentinput" onblur="onBlur(this,'content');" onfocus="onFocus(this,'content');"></textarea>
+					<label for="#" id="content" class="remind">请出入正确的内容</label>
+				</span>
+				<span class="submit">
+					<input type="submit" />
+				</span>
+			</form>
+		</div>
+	</div>
+	<div class="footer">
+		<p>CopyRight &copy; 2011 sudo.cn All Rights Reserved</p>
+		<p><a href="#">System Introduction</a>&brvbar;
+		<a href="#">Contact Us</a>&brvbar;
+		<a href="#">Manage</a></p>
+	</div>
+</body>
+</html>

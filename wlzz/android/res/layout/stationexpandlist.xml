@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:background="@drawable/default_bg"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+	
+	<TextView
+	    android:gravity="center_horizontal"
+	    android:id="@+id/welcomeback"
+	    android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="15dp"
+		android:text="@string/welcomeback"
+		android:textColor="#BE1E2D"
+		android:layout_alignTop="@+id/refresh"/>
+
+	<ImageView
+	android:id="@+id/userinfo"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content" 
+	android:src="@drawable/userinfo"
+	android:layout_toLeftOf="@+id/refresh"
+	android:layout_alignTop="@+id/refresh"
+	/>	
+	<ImageView
+	android:layout_marginRight="5dp"
+	android:layout_marginTop="5dp"
+	android:id="@+id/refresh"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content" 
+	android:src="@drawable/refresh2"
+	android:layout_alignParentRight="true"
+	/>	
+
+	<ImageView
+	android:layout_below="@+id/welcomeback"
+	android:id="@+id/stationtitle"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content" 
+	android:padding="5dp"
+	android:gravity="center_horizontal"
+	android:src="@drawable/stationlistname"
+	/>			
+	<ExpandableListView
+	    android:layout_below="@+id/stationtitle"
+		android:id="@+id/stationListView"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		/>
+	
+</RelativeLayout>

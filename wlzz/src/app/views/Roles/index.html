@@ -1,0 +1,45 @@
+#{extends 'main_title_bar.html'/}
+#{set 'moreStyles'}
+<link rel="stylesheet" href="@{'/public/stylesheets/table.css'}" />
+<link rel="stylesheet" href="@{'/public/stylesheets/checkOrderList.css'}" />
+<link rel="stylesheet" href="@{'/public/stylesheets/bar.css'}" />
+#{/set}
+#{set 'moreScripts'}
+<script type="text/javascript" src="@{'/public/javascripts/searchInput.js'}"></script>
+#{/set}	
+#{set title:'角色信息'/}
+    <div class="orderlist">
+        <div class="infobar">
+            <span><strong>角色列表</strong></span>
+            <span class="inputbar">
+            </span>
+        </div>
+        <div class="table">
+            <table>
+
+                <th>ID</th>
+                <th></th>
+                <th>角色名</th>
+                <th></th>
+                <th>详细</th>
+                <th></th>
+                <th>删除</th>
+                <th></th>
+
+                #{list items:roleList,as:'role'}
+                <tr #{if role_index%2 != 0}class="single"#{/if}#{else}class="double"#{/else}>
+                    <td>${role.id}</td>
+                    <td></td>
+                    <td>${role.name}</td>
+                    <td></td>
+                    <td><a href="@{Roles.show(role.name)}">查看</a> </td>
+                    <td></td>
+                    <td><a href="@{Roles.delete(role.id)}">删除</a> </td>
+                    <td></td>
+                </tr>
+                #{/list}
+
+            </table>
+
+        </div> 
+    </div>

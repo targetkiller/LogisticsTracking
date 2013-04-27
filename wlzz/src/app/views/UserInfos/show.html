@@ -1,0 +1,59 @@
+#{extends 'main_title_bar.html'/}
+#{set 'moreStyles'}
+<link rel="stylesheet" href="@{'/public/stylesheets/information.css'}" />
+<link rel="stylesheet" href="@{'/public/stylesheets/bar.css'}" />
+#{/set}
+#{set 'moreScripts'}
+<script type="text/javascript" src="@{'/public/javascripts/information.js'}"></script>
+#{/set}
+#{set title:'个人信息'/}
+    <div class="content">
+        <div class="infobar">
+            <p>
+                <strong>个人信息</strong> (用*标记的信息是十分重要的信息)
+            </p>
+        </div>
+        <form>
+        <span>
+            <label for="account">用户帐号:</label>&nbsp; 
+            <input type="text" id="account" value="${account}" readonly="readonly" style="border:none"/>
+        </span>
+        <span>
+            <label for="nickname">*昵称:</label>&nbsp;
+            <input type="text" id="nickname" value="${userinfo?.name}" readonly="readonly" style="border:none"/>
+        </span>
+
+        <span>
+            <label for="mail">*邮箱:</label>&nbsp;
+            <input type="text" id="mail" value="${userinfo?.email}" readonly="readonly" style="border:none"/>
+        </span>
+        <span>
+            <label for="age">年龄:</label>&nbsp;
+            <input type="text" id="age" value="${userinfo?.age}" readonly="readonly" style="border:none"/>
+        </span>
+        <span>
+            <label for="gener">性别:</label>&nbsp;
+            #{if userinfo?.gender}
+            <input type="text" id="age" value="男" readonly="readonly" style="border:none"/>
+            #{/if}
+            #{else}
+            <input type="text" id="age" value="女" readonly="readonly" style="border:none"/>
+            #{/else}
+        </span>
+        <span>
+            <label for="phone">*电话:</label>&nbsp;
+            <input type="text" id="phone" value="${userinfo?.phone}" readonly="readonly" style="border:none"/>
+        </span>
+        <span>
+            <label for="zipcode">*邮编:</label>&nbsp;
+            <input type="text" id="zipCode" value="${userinfo?.zipCode}" readonly="readonly" style="border:none"/>
+        </span>
+        <span>
+            <label for="address" >*详细地址:</label>&nbsp;
+            <input type="text" id="address" value="${userinfo?.address}" readonly="readonly" style="border:none"/>
+        </span>
+        <span class="submit">
+        <button><a href="@{Userinfos.updateByAccount(account)}">修改</a></button>
+        </span>
+        </form>
+    </div>

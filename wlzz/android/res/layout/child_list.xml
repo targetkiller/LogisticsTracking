@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@null">
+
+
+    <LinearLayout
+        android:id="@+id/child_list.title2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp" 
+        android:orientation="vertical"
+        android:background="@null">
+
+        <TextView
+            android:id="@+id/child_list.description.title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="55dp"
+            android:text="备注："
+            android:textSize="17dp" 
+            android:background="@null"/>
+
+        <TextView
+            android:id="@+id/child_list.des"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17dp" 
+            android:layout_marginLeft="58dp"
+            android:layout_marginRight="40dp"
+            android:background="@null"/>
+    </LinearLayout>
+
+</LinearLayout>

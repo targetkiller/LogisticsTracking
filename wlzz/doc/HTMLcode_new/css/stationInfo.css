@@ -1,0 +1,111 @@
+label{
+	float: left;
+	width: 175px;
+	height: 27px;
+	text-align: right;
+	line-height: 27px;
+}
+span{
+	display: block;
+	width: 775px;
+	height: 34px;
+	margin:  10px 1px;
+}
+input{
+	border: 1px solid #afafaf;
+	width: 215px;
+	height: 27px;
+}
+textarea{
+	width: 215px;
+	height: 50px;
+	border: 1px solid #afafaf;
+}
+table{
+	width: 780px;
+	border-spacing: 0;
+}
+th{
+	width: 120px;
+	height: 25px;
+	font-size: 14px;
+	background-color: #ffffff;
+	border-bottom: 3px solid #e1dfe0;
+}
+tr{
+	height: 25px;
+}
+td{
+	width: 120px;
+	text-align: center;
+}
+
+.content{
+	width: 780px;
+	margin: 30px auto auto 161px;
+}
+.station{
+	width: 780px;
+	height: 600px;
+	border: 1px solid #c8d9ef;
+}
+.radio{
+	width: 20px;
+	float: left;
+}
+.radioinfo{
+	width: 30px;
+}
+.btn{
+	margin-left: 50px;
+}
+.manager{
+	width: 780px;
+}
+.single{
+	background-color: #f4f8fc;
+}
+.double{
+	background-color: #ffffff;
+}
+
+.page{
+	height: 35px;
+	margin-top: 10px;
+	line-height: 35px;
+	text-align: center;
+	font-size: 14px;
+}
+.page span{
+	display: inline;
+}
+.page span a{
+	border: 1px solid #dbdad8;
+	padding: 4px;
+	background:url(../image/page_bg.gif) 0 0 transparent repeat-x;
+}
+.page span a:link{
+	color: #000000;
+}
+.page span a:active { 
+	text-decoration:none;
+	border: 1px solid #97bc38;
+}
+.page span a:hover { 
+	text-decoration:none;
+	color: #000000;
+	background:none;
+	background-color:#d4d2d3;
+} 
+.page span a:visited { 
+	text-decoration: none;
+	color:#000000;
+}
+.remind{
+	float: none;
+	padding: 5px;
+	margin-left: 50px;
+	visibility:hidden;
+	border: 1px solid #b3c8dd;
+	background-color:#e0e5eb;
+}

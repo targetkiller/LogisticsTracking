@@ -1,0 +1,315 @@
+#{extends 'main_title_bar.html'/}
+#{set 'moreStyles'}
+<link rel="stylesheet" href="@{'/public/stylesheets/common.css'}" />
+<link rel="stylesheet" href="@{'/public/stylesheets/layout.css'}" />
+<link rel="stylesheet" href="@{'/public/stylesheets/countData.css'}" />
+<link rel="stylesheet" href="@{'/public/stylesheets/bar.css'}" />
+#{/set}
+#{set 'moreScripts'}
+<script type="text/javascript" src="@{'/public/javascripts/countData.js'}"></script>
+#{/set}
+#{set title:'查询订单'/}
+        <div id="content" class="content">
+            <div class="infobar"><strong>数据统计</strong> </div>
+            <div class="checkfield">
+                <div class="tabbar">
+                    <ul>
+                        <li onclick="accountData();" id="data">订单统计</li>
+                        <li onclick="accountCharts();" id="charts">图形统计</li>
+                    </ul>
+                    <form action="@{Root.orderInfoS(chartBYear+chartBMonth+chartBDay,chartAYear+chartAMonth+chartADay)}" id="dataform">
+                        <span>
+                            <label for="#">从:</label>
+                            <label for="#">年</label>
+                            <select name="listBYear" id="listBYear">
+                                <option value="2000">2000</option>
+                                <option value="2001">2001</option>
+                                <option value="2002">2002</option>
+                                <option value="2003">2003</option>
+                                <option value="2004">2004</option>
+                                <option value="2005">2005</option>
+                                <option value="2006">2006</option>
+                                <option value="2007">2007</option>
+                            </select>
+                            <label for="#">月</label>
+                            <select name="listBMonth" id="listBMonth">
+                                <option value="-01-">1</option>
+                                <option value="-02-">2</option>
+                                <option value="-03-">3</option>
+                                <option value="-04-">4</option>
+                                <option value="-05-">5</option>
+                                <option value="-06-">6</option>
+                                <option value="-07-">7</option>
+                                <option value="-08-">8</option>
+                                <option value="-09-">9</option>
+                                <option value="-10-">10</option>
+                                <option value="-11-">11</option>
+                                <option value="-12-">12</option>
+                            </select>
+                            <label for="#">日</label>
+                            <select name="listBDay" id="listBDay">
+                                <option value="01">1</option>
+                                <option value="02">2</option>
+                                <option value="03">3</option>
+                                <option value="04">4</option>
+                                <option value="05">5</option>
+                                <option value="06">6</option>
+                                <option value="07">7</option>
+                                <option value="08">8</option>
+                                <option value="09">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                                <option value="21">21</option>
+                                <option value="22">22</option>
+                                <option value="23">23</option>
+                                <option value="24">24</option>
+                                <option value="25">25</option>
+                                <option value="26">26</option>
+                                <option value="27">27</option>
+                                <option value="28">28</option>
+                                <option value="29">29</option>
+                                <option value="30">30</option>
+                                <option value="31">31</option>
+                            </select>
+                        </span>	
+                        <span>
+                            <label for="#">到:</label>
+                            <label for="#">年</label>
+                            <select name="listAYear" id="listAYear">
+                                <option value="2000">2000</option>
+                                <option value="2001">2001</option>
+                                <option value="2002">2002</option>
+                                <option value="2003">2003</option>
+                                <option value="2004">2004</option>
+                                <option value="2005">2005</option>
+                                <option value="2006">2006</option>
+                                <option value="2007">2007</option>
+                            </select>
+                            <label for="#">月</label>
+                            <select name="listAMonth" id="listAMonth">
+                                <option value="-01-">1</option>
+                                <option value="-02-">2</option>
+                                <option value="-03-">3</option>
+                                <option value="-04-">4</option>
+                                <option value="-05-">5</option>
+                                <option value="-06-">6</option>
+                                <option value="-07-">7</option>
+                                <option value="-08-">8</option>
+                                <option value="-09-">9</option>
+                                <option value="-10-">10</option>
+                                <option value="-11-">11</option>
+                                <option value="-12-">12</option>
+                            </select>
+                            <label for="#">日</label>
+                            <select name="listADay" id="listADay">
+                                <option value="01">1</option>
+                                <option value="02">2</option>
+                                <option value="03">3</option>
+                                <option value="04">4</option>
+                                <option value="05">5</option>
+                                <option value="06">6</option>
+                                <option value="07">7</option>
+                                <option value="08">8</option>
+                                <option value="09">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                                <option value="21">21</option>
+                                <option value="22">22</option>
+                                <option value="23">23</option>
+                                <option value="24">24</option>
+                                <option value="25">25</option>
+                                <option value="26">26</option>
+                                <option value="27">27</option>
+                                <option value="28">28</option>
+                                <option value="29">29</option>
+                                <option value="30">30</option>
+                                <option value="31">31</option>
+                            </select>
+                        </span>	
+                        <button class="btn databtn" type="submit"><strong>统计</strong></button>
+                    </form>
+                    <form action="" id="chartform">
+                        <span>
+                            <label for="#">从:</label>
+                            <label for="#">年</label>
+                            <select name="#" id="chartBYear">
+                                <option value="2000">2000</option>
+                                <option value="2001">2001</option>
+                                <option value="2002">2002</option>
+                                <option value="2003">2003</option>
+                                <option value="2004">2004</option>
+                                <option value="2005">2005</option>
+                                <option value="2006">2006</option>
+                                <option value="2007">2007</option>
+                            </select>
+                            <label for="#">月</label>
+                            <select name="#" id="chartBMonth">
+                                <option value="-01-">1</option>
+                                <option value="-02-">2</option>
+                                <option value="-03-">3</option>
+                                <option value="-04-">4</option>
+                                <option value="-05-">5</option>
+                                <option value="-06-">6</option>
+                                <option value="-07-">7</option>
+                                <option value="-08-">8</option>
+                                <option value="-09-">9</option>
+                                <option value="-10-">10</option>
+                                <option value="-11-">11</option>
+                                <option value="-12-">12</option>
+                            </select>
+                            <label for="#">日</label>
+                            <select name="#" id="chartBDay">
+                                <option value="01">1</option>
+                                <option value="02">2</option>
+                                <option value="03">3</option>
+                                <option value="04">4</option>
+                                <option value="05">5</option>
+                                <option value="06">6</option>
+                                <option value="07">7</option>
+                                <option value="08">8</option>
+                                <option value="09">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                                <option value="21">21</option>
+                                <option value="22">22</option>
+                                <option value="23">23</option>
+                                <option value="24">24</option>
+                                <option value="25">25</option>
+                                <option value="26">26</option>
+                                <option value="27">27</option>
+                                <option value="28">28</option>
+                                <option value="29">29</option>
+                                <option value="30">30</option>
+                                <option value="31">31</option>
+                            </select>
+                        </span>	
+                        <span>
+                            <label for="#">到:</label>
+                            <label for="#">年</label>
+                            <select name="#" id="chartAYear">
+                                <option value="2000">2000</option>
+                                <option value="2001">2001</option>
+                                <option value="2002">2002</option>
+                                <option value="2003">2003</option>
+                                <option value="2004">2004</option>
+                                <option value="2005">2005</option>
+                                <option value="2006">2006</option>
+                                <option value="2007">2007</option>
+                            </select>
+                            <label for="#">月</label>
+                            <select name="#" id="chartAMonth">
+                                <option value="-01-">1</option>
+                                <option value="-02-">2</option>
+                                <option value="-03-">3</option>
+                                <option value="-04-">4</option>
+                                <option value="-05-">5</option>
+                                <option value="-06-">6</option>
+                                <option value="-07-">7</option>
+                                <option value="-08-">8</option>
+                                <option value="-09-">9</option>
+                                <option value="-10-">10</option>
+                                <option value="-11-">11</option>
+                                <option value="-12-">12</option>
+                            </select>
+                            <label for="#">日</label>
+                            <select name="#" id="chartADay">
+                                <option value="01">1</option>
+                                <option value="02">2</option>
+                                <option value="03">3</option>
+                                <option value="04">4</option>
+                                <option value="05">5</option>
+                                <option value="06">6</option>
+                                <option value="07">7</option>
+                                <option value="08">8</option>
+                                <option value="09">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                                <option value="21">21</option>
+                                <option value="22">22</option>
+                                <option value="23">23</option>
+                                <option value="24">24</option>
+                                <option value="25">25</option>
+                                <option value="26">26</option>
+                                <option value="27">27</option>
+                                <option value="28">28</option>
+                                <option value="29">29</option>
+                                <option value="30">30</option>
+                                <option value="31">31</option>
+                            </select>
+                        </span>	
+                        <span>
+                            <label for="">单位 :</label>
+                            <select name="#" id="unit">
+                                <option value="year">年</option>
+                                <option value="month">月</option>
+                                <option value="day">日</option>
+                            </select>
+                            <label for="">类型 :</label>
+                            <select name="#" id="unitType">
+                                <option value="pass">经过</option>
+                                <option value="create">创建</option>
+                            </select>
+                            <img class="circleimg" src="@{'/public/images/circle.png'}" alt="#" /> 
+
+                        </span>
+                        <span>
+                            <label for="">工作站:</label>
+                            <select id="stationInput">
+                                #{list items:allStation,as:'station'}
+                                <option value="${station.id}">${station.name}</option>
+                                #{/list}
+                            </select>
+                            <img class="rectangleimg" src="@{'/public/images/rectangle.png'}" alt="#" /> 
+
+                        </span>
+                    </form>
+                    <button class="btn chartbtn" onclick="chart('Pie')">饼型分析</button>
+                    <button class="btn chartbtn" onclick="chart('Bar')">条型查询</button>
+
+                </div>
+                <img id="soga" src=""/>
+                <div id="sogaData"></div>
+            </div>
+        </div>
+    
+<!--<span>
+                                                        <label for="#">工作站:</label>
+                                                        <input type="checkbox" id="checkbox" onclick="stationInput();"/>
+                                                        <input type="text" id="station"/>
+                                                </span>-->

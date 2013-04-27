@@ -1,0 +1,66 @@
+form{
+	width: 780px;
+	height: 530px;
+	background-color:#f4f8fc;
+	border: 1px solid #c8d9ef;
+}
+span{
+	display: block;
+	width: 775px;
+	height: 34px;
+	margin:  10px 1px;
+}
+label{
+	float: left;
+	width: 175px;
+	height: 27px;
+	text-align: right;
+	line-height: 27px;
+}
+input{
+	border: 1px solid #afafaf;
+	width: 215px;
+	height: 27px;
+}
+textarea{
+	width: 215px;
+	height: 50px;
+	border: 1px solid #afafaf;
+}
+.content{
+	width: 780px;
+	margin: 30px auto auto 161px;
+}
+.radio{
+	width: 20px;
+	float: left;
+}
+.radioinfo{
+	width: 30px;
+}
+.textarea{
+	margin-bottom: 50px;
+}
+
+.submit{
+	float: left;
+	margin: 35px auto 0px 175px;
+}
+.main div.content form span.submit input{
+	width: 130px;
+	background:url(../image/register_bg.gif) 0 0 transparent repeat-x;
+}
+#account{
+	text-align: left;
+}
+#role{
+	text-align: left;
+}
+.remind{
+	float: none;
+	padding: 5px;
+	margin-left: 50px;
+	visibility:hidden;
+	border: 1px solid #b3c8dd;
+	background-color:#e0e5eb;
+}

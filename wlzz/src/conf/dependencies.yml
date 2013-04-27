@@ -1,0 +1,5 @@
+# Application dependencies
+
+require:
+    - play
+    - org.jfree -> jfreechart 1.0.17

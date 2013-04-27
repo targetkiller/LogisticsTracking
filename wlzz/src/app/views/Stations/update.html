@@ -1,0 +1,91 @@
+#{extends 'main.html'/}
+
+#{set 'moreStyles'}
+	<link rel="stylesheet" href="@{'/public/stylesheets/stationInfo.css'}" />
+#{/set}
+
+#{set 'moreScripts'}
+	<script type="text/javascript" src="@{'/public/javascripts/information.js'}"></script>
+#{/set}
+
+#{set title:'更新信息'/}
+
+	<div class="main">
+		<div class="title">
+			<img src="@{'/public/images/title.png'}" alt="#" />
+		</div>
+		<div class="functionbar">
+			<ul>全部功能
+				<li><a href="@{Stations.show(station.id)}"><img src="@{'/public/images/point.gif'}" alt="#" /> 返回站台管理</a></li>
+				<li><a href="@{Stations.index()}"><img src="@{'/public/images/point.gif'}" alt="#" /> 选择工作站</a></li>
+			</ul>
+		</div>
+		<div class="content">
+			<div class="infobar">
+				<p>
+					<strong>站台信息(这个页面还没弄)</strong>
+				</p>
+			</div>
+		#{form @Stations.update(),id:'form1'}
+			<div class="station">
+				<div class="text">
+					
+					<span>
+						<label for="nameinput">工作站ID:</label>
+						<input type="text" id="nameinput" name="station.id" value="${station.id}" readonly="readonly"/>
+					</span>
+					
+					<span>
+						<label for="nameinput">名字:</label>
+						<input type="text" id="nameinput" name="station.name" value="${station.name}" onblur="onBlur(this,'name');" onfocus="onFocus(this,'name');"/>
+						<label for="#" id="name" class="remind">请输入正确的名字</label>
+						<span class="error">#{error 'station.name'/}</span>
+					</span>					
+					
+					<span>
+						<label for="accountinput">账号:</label>
+						<input type="text" id="accountinput" name="station.account" value="${station.account}" onblur="onBlur(this,'account');" onfocus="onFocus(this,'account');"/>
+						<label for="#" id="account" class="remind">请输入正确的账号</label>
+						<span class="error">#{error 'station.account'/}</span>
+					</span>
+					
+					<span>
+						<label for="passwordinput">密码:</label>
+						<input type="text" id="passwordinput" name="station.password" value="${station.password}"  onblur="onBlur(this,'password');" onfocus="onFocus(this,'password');"/>
+						<label for="#" id="password" class="remind">请输入正确的密码</label>
+						<span class="error">#{error 'station.account'/}</span>
+					</span>
+					
+					<span>
+						<label for="addressinput">联系地址:</label>
+						<input type="text" id="addressinput" name="station.address" value="${station.address}" onblur="onBlur(this,'address');" onfocus="onFocus(this,'address');"/>
+						<label for="#" id="address" class="remind">请输入正确的地址</label>
+						<span class="error">#{error 'station.address'/}</span>
+					</span>
+					
+					<span>
+						<label for="phoneinput">联系电话:</label>
+						<input type="text" id="phoneinput" name="station.phone" value="${station.phone}" onblur="onBlur(this,'phone');" onfocus="onFocus(this,'phone');"/>
+						<label for="#" id="phone" class="remind">请输入正确的电话号码</label>
+						<span class="error">#{error 'station.phone'/}</span>
+					</span>
+					
+					
+					<span>
+						<label for="onlineNuminput">同时登录人数:</label>
+						<input type="text" id="phoneinput" name="station.onlineNum" value="${station.onlineNum}" onblur="onBlur(this,'onlineNum');" onfocus="onFocus(this,'onlineNum');"/>
+						<label for="#" id="onlineNum" class="remind">请输入正确的同时登录人数</label>
+						<span class="error">#{error 'station.onlineNum'/}</span>
+					</span>
+					
+					<span>
+						<input type="submit" class="btn" value="确定"/>
+					</span>
+				
+				</div>
+				
+			</div>
+		#{/form}
+		</div>
+	</div>
+	

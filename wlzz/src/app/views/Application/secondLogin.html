@@ -1,0 +1,72 @@
+#{extends 'main_title.html'/}
+#{set title:'登陆工作站'/}
+
+#{set 'moreStyles'}
+<link rel="stylesheet" href="@{'/public/stylesheets/secondRegister.css'}" />
+<link rel="stylesheet" href="@{'/public/stylesheets/table.css'}" />
+#{/set}
+#{set 'moreScripts'}
+<script type="text/javascript" src="@{'/public/javascripts/searchInput.js'}"></script>
+<script type="text/javascript" src="@{'/public/javascripts/secondRegister.js'}"></script>
+#{/set}
+
+
+    <div class="content">
+        <div class="infobar">
+            <span><strong>站台列表</strong></span>
+        </div>
+        <div class="sitelist">
+
+            #{list items:allStation,as:'station'}
+            <div class="site">
+                <span class="siteimage">
+                    <img src="@{'/public/images/siteImage.png'}" alt="#" />
+                </span>
+                <span>站台:${station.name}</span>
+                <span>地址:${station.address}</span>
+                <span>电话:${station.phone}</span>
+                <span><a href="#"><button onclick="dialog();">登陆</button></a></span>
+            </div>
+            #{/list}
+
+        </div>
+
+        <div class="page">
+            #{if page > 1}<span><a href="@{Application.secondLogin}?pages=1">首页</a></span>#{/if}#{else}<span><a href="#">首页</a></span>#{/else}
+            #{if page > 1}<span><a href="@{Application.secondLogin}?pages=${page-1}">上一页</a></span>#{/if}#{else}<span><a href="#">上一页</a></span>#{/else}
+
+            #{list items:pageList,as:'pagelist'}
+            #{if page == pagelist }
+            <span>${page}</span>
+            #{/if}
+            #{else}
+            <span><a href="@{Application.secondLogin}?pages=${pagelist}">${pagelist}</a></span>
+            #{/else}
+            #{/list}
+
+            #{if page < allPage}<span><a href="@{Application.secondLogin}?pages=${page+1}">下一页</a></span>#{/if}#{else}<span><a href="#">下一页</a></span>#{/else}
+            #{if page < allPage}<span><a href="@{Application.secondLogin}?pages=${allPage}">尾页</a></span>#{/if}#{else}<span><a href="#">尾页</a></span>#{/else}
+        </div>
+    </div>
+
+<div id="overall" style="display: none;"></div>
+<div id="alert" style="display: none;">
+    <form name="form" method="post" action="@{Application.secondLoginProcesser}" >
+        <span class="account">
+            <label for="account">账号:</label>
+            <input name="account" type="text" />
+        </span>
+        <span class="password">
+            <label for="password">密码:</label>
+            <input name="password" type="password" />
+        </span>
+        <span class="button">
+        	<input type="submit" onclick="return send();" value="登陆"/>
+            <input type="button" onclick="disappear();" value="取消"/>
+        </span>
+    </form>
+
+</div>
+<div class="logo" id="logo" style="display: none;">
+    <img src="@{'/public/images/dialog_logo.png'}" alt="#" />
+</div>

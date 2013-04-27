@@ -1,0 +1,62 @@
+#{extends 'main_title_bar.html'/}
+#{set 'moreStyles'}
+<link rel="stylesheet" href="@{'/public/stylesheets/table.css'}" />
+<link rel="stylesheet" href="@{'/public/stylesheets/checkOrderList.css'}" />
+<link rel="stylesheet" href="@{'/public/stylesheets/bar.css'}" />
+#{/set}
+#{set 'moreScripts'}
+<script type="text/javascript" src="@{'/public/javascripts/searchInput.js'}"></script>
+#{/set}	
+#{set title:'用户信息'/}
+    <div class="orderlist">
+        <div class="infobar">
+            <span><strong>用户列表</strong></span>
+            <span class="inputbar">
+            </span>
+        </div>
+        <div class="table">
+            <table>
+
+                <th>用户昵称</th>
+                <th>帐号</th>
+                <th>密码</th>
+                <th>所属角色</th>
+                <th>详细信息</th>
+                <th>修改角色</th>
+                <th>修改密码</th>
+                <th>删除</th>
+
+                #{list items:allUser,as:'user'}
+                <tr #{if user_index%2 != 0}class="single"#{/if}#{else}class="double"#{/else}>
+                    <td>${user.getRealName()}</td>
+                    <td>${user.account}</td>
+                    <td>${user.password}</td>
+                    <td><a href="@{Roles.show(user.getRoleName())}">${user.getRoleName()}</a></td>
+                    <td><a href="@{UserInfos.showByAccount(user.account)}">查看</a></td>
+                    <td><a href="@{Application.goTo('Users','changeRole.html')}?account=${user.account}">编辑</a></td>
+                    <td><a href="@{Application.goTo('Users','changePassword.html')}?account=${user.account}&fromPath='用户管理'">编辑</a> </td>
+                    <td><a href="@{Users.delete(user.account)}">删除</a> </td>
+                </tr>
+                #{/list}
+                
+
+            </table>
+
+            <div class="page">
+                #{if page > 1}<span><a href="@{Users.index}?pages=1">首页</a></span>#{/if}#{else}<span><a href="#">首页</a></span>#{/else}
+                #{if page > 1}<span><a href="@{Users.index}?pages=${page-1}">上一页</a></span>#{/if}#{else}<span><a href="#">上一页</a></span>#{/else}
+
+                #{list items:pageList,as:'pagelist'}
+                #{if page == pagelist }
+                <span>${page}</span>
+                #{/if}
+                #{else}
+                <span><a href="@{Users.index}?pages=${pagelist}">${pagelist}</a></span>
+                #{/else}
+                #{/list}
+
+                #{if page < allPage}<span><a href="@{Users.index}?pages=${page+1}">下一页</a></span>#{/if}#{else}<span><a href="#">下一页</a></span>#{/else}
+                #{if page < allPage}<span><a href="@{Users.index}?pages=${allPage}">尾页</a></span>#{/if}#{else}<span><a href="#">尾页</a></span>#{/else}
+            </div>
+        </div> 
+    </div>

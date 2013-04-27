@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:background="@drawable/default_bg"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+	<ImageView
+	android:id="@+id/stationinfo"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content" 
+	android:src="@drawable/stationinfoicon"
+	android:layout_toLeftOf="@+id/orderrefresh"
+	android:layout_alignTop="@+id/orderrefresh"
+	/>	
+	<ImageView
+	android:layout_marginRight="5dp"
+	android:layout_marginTop="5dp"
+	android:id="@+id/orderrefresh"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content" 
+	android:src="@drawable/refresh2"
+	android:layout_alignParentRight="true"
+	/>	
+	<ImageView
+    android:layout_below="@+id/orderrefresh"
+	android:id="@+id/ordertitle"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content" 
+	android:padding="5dp"
+	android:gravity="center_horizontal"
+	android:src="@drawable/orderinfoname"
+	/>			
+	<ExpandableListView
+	    android:layout_below="@+id/ordertitle"
+		android:id="@+id/OrderListView"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		/>
+	
+</RelativeLayout>

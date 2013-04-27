@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/default_bg"
+     >
+     <ImageView
+       		android:layout_width="match_parent"
+        	android:layout_height="wrap_content" 
+        	android:id="@+id/userinfolooktitle"       
+        	android:src="@drawable/userinfoname"
+        	android:gravity="center_horizontal"
+        	/>
+     <ScrollView 
+           android:layout_marginLeft="15dp"
+           android:layout_marginRight="15dp"
+    android:layout_width="match_parent"
+    android:layout_height="300dp">
+<TableLayout
+
+    android:background="@drawable/bg_border"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TableRow
+          android:gravity="center_horizontal"
+    	android:layout_width="match_parent"
+    	android:layout_height="50dp">
+    	<TextView    	
+			android:layout_width="wrap_content"
+			android:layout_height="50dp"
+			android:gravity="center_vertical"
+			android:textSize="8pt"  
+			android:text="@string/username"/>
+    	<TextView        
+    	    
+			android:layout_width="wrap_content"
+			android:layout_height="50dp"
+			android:gravity="center_vertical"
+			android:textSize="8pt" 
+		
+   	 		android:text="1"/>   
+    </TableRow>
+    		
+   
+	<TableRow
+	     android:gravity="center_horizontal"
+    	android:layout_width="match_parent"
+    	android:layout_height="wrap_content"> 
+    	<TextView    
+        	android:layout_width="wrap_content"
+			android:layout_height="50dp"
+			android:gravity="center_vertical"
+       	 	android:text="@string/useremail"
+        	android:textSize="8pt" />
+		<TextView            	
+			android:layout_width="wrap_content"
+			android:layout_height="50dp"
+			android:gravity="center_vertical"
+			android:textSize="8pt" 
+    		android:text="2"/>   
+    </TableRow>
+    
+	<TableRow
+	       android:gravity="center_horizontal"
+    	android:layout_width="match_parent"
+    	android:layout_height="wrap_content"> 
+    	<TextView       	
+			android:layout_width="wrap_content"
+			android:layout_height="50dp" 
+			android:textSize="8pt"  
+			android:text="@string/userage"/>
+    	<TextView           	
+			android:layout_width="wrap_content"
+			android:layout_height="50dp"
+			android:textSize="8pt" 
+    		android:text="3"/>   
+    </TableRow>
+    
+    <TableRow
+            android:gravity="center_horizontal"
+    	android:layout_width="match_parent"
+    	android:layout_height="wrap_content">
+    	<TextView 	       
+			android:layout_width="wrap_content"
+			android:layout_height="50dp" 
+			android:textSize="8pt"  
+			android:text="@string/usergender"/>
+   	 	<TextView     	       
+			android:layout_width="wrap_content"
+			android:layout_height="50dp"
+			android:textSize="8pt" 
+   	 		android:text="4"/> 
+    </TableRow>
+ 
+    <TableRow
+             android:gravity="center_horizontal"
+    	android:layout_width="match_parent"
+    	android:layout_height="wrap_content">
+    	<TextView 	       
+			android:layout_width="wrap_content"
+			android:layout_height="50dp" 
+			android:textSize="8pt"  
+			android:text="@string/userphone"/>
+   	 	<TextView     	       
+			android:layout_width="wrap_content"
+			android:layout_height="50dp"
+			android:textSize="8pt" 
+   	 		android:text="5"/> 
+    </TableRow>
+    
+    <TableRow
+          android:gravity="center_horizontal"
+    	android:layout_width="match_parent"
+    	android:layout_height="wrap_content">
+    	<TextView 	       
+			android:layout_width="wrap_content"
+			android:layout_height="50dp" 
+			android:textSize="8pt"  
+			android:text="@string/userzipcode"/>
+   	 	<TextView     	       
+			android:layout_width="wrap_content"
+			android:layout_height="50dp"
+			android:textSize="8pt" 
+   	 		android:text="6"/> 
+    </TableRow>
+    <TableRow
+        android:gravity="center_horizontal"
+    	android:layout_width="match_parent"
+    	android:layout_height="wrap_content">
+    	<TextView 	       
+			android:layout_width="wrap_content"
+			android:layout_height="50dp" 
+			android:textSize="8pt"  
+			android:text="@string/useraddress"/>
+   	 	<TextView     	       
+			android:layout_width="wrap_content"
+			android:layout_height="50dp"
+			android:textSize="8pt" 
+   	 		android:text="6"/> 
+    </TableRow>
+    
+    
+        
+</TableLayout>
+
+</ScrollView>
+<LinearLayout 
+ 	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal"
+     android:layout_gravity="center_horizontal">
+    <Button
+        android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:text="@string/confirm"
+    	android:id="@+id/userinfolookconfirm"
+    	/>
+    <Button
+        android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:id="@+id/userinfolookcancel"
+    	android:text="@string/cancel"/>   
+ </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,135 @@
+span{
+	display:block;
+}
+button{
+	height: 25px;
+	width: 85px;
+	background:url(../image/page_bg.gif) 0 0 transparent repeat;
+}
+.content{
+	width: 780px;
+	margin: 30px auto auto 161px;
+}
+.infobar span{
+	display: inline;
+}
+.inputbar{
+	height: 34px;
+	float: right;
+
+}
+.inputbar input{
+	height: 25px;
+	width: 150px;
+	color: #bababa;
+	line-height: 25px;
+}
+.inputbar button{ 
+	height: 25px;
+	width: 75px;
+	background:url(../image/page_bg.gif) 0 0 transparent repeat;
+	margin-right: 10px;
+	line-height: 20px;
+}
+
+
+.sitelist{
+	width: 780px;
+	height: 600px;
+	background-color:#f4f8fc;
+	border: 1px solid #c8d9ef;
+}
+.site{
+	float: left;
+	width: 240px;
+	height: 130px;
+	margin-top: 20px;
+	margin-left: 15px;
+}
+.site img{
+	width: 100px;
+	height: 100px;
+}
+.siteimage{
+	float:left;
+}
+.site span{
+	padding: 3px;
+	margin: 5px 5px;
+}
+
+.page{
+	clear: both;
+	height: 35px;
+	margin-top: 20px;
+	line-height: 35px;
+	text-align: center;
+	font-size: 14px;
+}
+.page span {
+	display: inline;
+}
+.page span a{
+	border: 1px solid #dbdad8;
+	padding: 4px;
+	background:url(../image/page_bg.gif) 0 0 transparent repeat-x;
+}
+.page span a:link{
+	color: #000000;
+}
+.page span a:active { 
+	text-decoration:none;
+	border: 1px solid #97bc38;
+}
+.page span a:hover { 
+	text-decoration:none;
+	color: #000000;
+	background:none;
+	background-color:#d4d2d3;
+} 
+.page span a:visited { 
+	text-decoration: none;
+	color:#000000;
+}
+
+#overall{
+	background-color:#000000;
+	opacity: 0.3;
+	filter:alpha(opacity=30);  
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 10001;
+}
+#alert{
+	position: absolute;
+	z-index: 10001;
+	background-color: #ffffff;
+	width: 400px;
+	height: 200px;
+	border: 5px solid #3F73EB;
+}
+#alert span{
+	display: block;
+	height: 25px;
+	font-size: 16px;
+}
+#alert input{
+	height: 25px;
+	width: 180px;
+}
+#alert .account{
+	margin: 40px auto auto 100px;
+}
+#alert .password{
+	margin: 20px auto auto 100px;
+}
+#alert .button{
+	margin: 20px auto auto 130px;
+}
+.logo{
+	position: absolute;
+	z-index: 10001;
+	height: 100px;
+	width: 100px;
+}

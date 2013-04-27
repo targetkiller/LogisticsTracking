@@ -1,0 +1,53 @@
+#{extends 'main_title_bar.html'/}
+#{set 'moreStyles'}
+<link rel="stylesheet" href="@{'/public/stylesheets/information.css'}" />
+<link rel="stylesheet" href="@{'/public/stylesheets/bar.css'}" />
+#{/set}
+#{set 'moreScripts'}
+<script type="text/javascript" src="@{'/public/javascripts/information.js'}"></script>
+#{/set}
+#{set title:'注册'/}
+        <div class="content">
+            <div class="infobar">
+                <p>
+                    <strong>注册信息</strong> (用*标记的信息是十分重要的信息)
+                </p>
+            </div>
+            <form action="@{Users.add}" method="post">
+
+                <span>
+                    <label for="accountinput">*用户名:</label>
+                    <input type="text" name="user.account" value="${user?.account}"  id="accountinput" onblur="onBlur(this,'account');" onfocus="onFocus(this,'account');"/>
+                    <label for="" class="error" style="color: red;float:none;">#{error 'user.account'/}</label> 
+                    <label for="accountinput" id="account" class="remind">请输入正确的用户名</label>
+                </span>
+
+                <span>
+                    <label for="passwordinput">*密码:</label>
+                    <input type="password" name="user.password" value="${user?.password}" id="passwordinput" onblur="onBlur(this,'password');" onfocus="onFocus(this,'password');"/>
+                    <label for="" class="error" style="color: red;float:none;">#{error 'user.password'/}</label> 
+                    <label for="passwordinput" id="password" class="remind">请输入正确的密码</label>
+                </span>
+
+                <span>
+                    <label for="rePasswordinput">*重复密码:</label>
+                    <input type="password" name="rePassword" value="${rePassword}" id="rePasswordinput" onblur="onBlur(this,'rePassword');" onfocus="onFocus(this,'rePassword');"/>
+                    <label for="" class="error" style="color: red;float:none;">#{error 'rePassword'/}</label> 
+                    <label for="rePasswordinput" id="rePassword" class="remind">请输入正确的重复密码</label>
+                </span>
+			<span>
+				<label for="roleNameinput">*角色名:</label>
+				<select name="roleName" id="roleNameinput">
+					#{list items:controllers.Roles.Rolelist(),as:'role'}
+						<option value="${role.name}">${role.name}</option>
+					#{/list}
+				</select>
+				
+			</span>
+                <span class="submit">
+                    <input type="submit" onclick="verification();"/>
+                    <label for="" class="error" style="color: red;float:none;">${errorMessage}</label>
+                </span>
+
+            </form>
+        </div>

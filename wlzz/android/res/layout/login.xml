@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/loginRoot"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/LinearLayoutPeople1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/default_bg"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/RelativeLayoutPeople2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp" >
+
+            <ImageView
+                android:id="@+id/PeoplefaceImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/login_head" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/RelativeLayoutPeople3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="15px"
+            android:layout_marginRight="15px"
+            android:background="@drawable/login_back"
+            android:paddingBottom="1dp" >
+
+            <EditText
+                android:id="@+id/Peoplelogin_edit_account"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="1.0px"
+                android:layout_marginLeft="5.0dip"
+                android:layout_marginRight="5.0dip"
+                android:layout_marginTop="1.0dip"
+                android:layout_toRightOf="@+id/PeoplefaceImg"
+                android:background="@drawable/qq_edit_login"
+                android:hint="@string/strInputAccHint"
+                android:inputType="number"
+                android:maxLength="10"
+                android:paddingLeft="45.0sp"
+                android:saveEnabled="true" />
+
+            <TextView
+                android:id="@+id/PeopleTextView01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/Peoplelogin_edit_account"
+                android:layout_alignLeft="@+id/Peoplelogin_edit_account"
+                android:layout_alignTop="@+id/Peoplelogin_edit_account"
+                android:layout_marginRight="15.0sp"
+                android:gravity="center_vertical"
+                android:paddingLeft="7.0sp"
+                android:text="@string/strAccInputLabel"
+                android:textColor="#ff3f3f3f"
+                android:textSize="16.0dip" />
+
+            <ImageButton
+                android:id="@+id/PeopleImageButton02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/Peoplelogin_edit_account"
+                android:layout_alignRight="@+id/Peoplelogin_edit_account"
+                android:layout_alignTop="@+id/Peoplelogin_edit_account"
+                android:layout_marginRight="1.0dip"
+                android:background="@drawable/more_select" />
+
+            <EditText
+                android:id="@+id/Peoplelogin_edit_pwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/Peoplelogin_edit_account"
+                android:layout_alignRight="@+id/Peoplelogin_edit_account"
+                android:layout_below="@+id/Peoplelogin_edit_account"
+                android:layout_marginRight="1.0dip"
+                android:background="@drawable/qq_edit_login"
+                android:inputType="textPassword"
+                android:maxLength="16"
+                android:paddingLeft="45.0sp"
+                android:saveEnabled="true" />
+
+            <TextView
+                android:id="@+id/PeopleTextView02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/Peoplelogin_edit_pwd"
+                android:layout_alignRight="@+id/PeopleTextView01"
+                android:layout_alignTop="@+id/Peoplelogin_edit_pwd"
+                android:gravity="center_vertical"
+                android:paddingLeft="7.0sp"
+                android:text="@string/strPswInputLabel"
+                android:textColor="#ff3f3f3f"
+                android:textSize="16.0dip" />
+
+            <Button
+                android:id="@+id/Peoplelogin_btn_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/Peoplelogin_edit_pwd"
+                android:layout_below="@+id/Peoplelogin_edit_pwd"
+                android:paddingLeft="13dp"
+                android:paddingRight="13dp"
+                android:text="@string/login" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

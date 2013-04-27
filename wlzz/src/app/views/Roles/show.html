@@ -1,0 +1,35 @@
+#{extends 'main_title_bar.html'/}
+#{set 'moreStyles'}
+<link rel="stylesheet" href="@{'/public/stylesheets/information.css'}" />
+<link rel="stylesheet" href="@{'/public/stylesheets/bar.css'}" />
+#{/set}
+#{set 'moreScripts'}
+<script type="text/javascript" src="@{'/public/javascripts/information.js'}"></script>
+#{/set}
+#{set title:'角色信息'/}
+    <div class="content">
+        <div class="infobar">
+            <p>
+                <strong>角色信息</strong> (用*标记的信息是十分重要的信息)
+            </p>
+        </div>
+		<form>
+        <span>
+            <label for="id">ID:</label>&nbsp; 
+            <input type="text" id="id" value="${role1?.id}" readonly="readonly" style="border:none"/>
+        </span>
+
+        <span>
+            <label for="name">*角色名:</label>&nbsp;
+            <input type="text" id="name" value="${role1?.name}" readonly="readonly" style="border:none"/>
+        </span>
+
+        <span>
+            <label for="discription" >*详细描述:</label>&nbsp;
+            <input type="text" id="discription" value="${role1?.discription}" readonly="readonly" style="border:none"/>
+        </span>
+        <span class="submit">
+        <button><a href="@{Roles.updateById(role1?.id)}">修改</a></button>
+        </span>
+        </form>
+    </div>

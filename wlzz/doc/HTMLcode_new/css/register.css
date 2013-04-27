@@ -1,0 +1,47 @@
+.main{
+	width: 900px;
+	margin: 41px auto;
+}
+form{
+	float: right;
+	width: 368px;
+	height: 250px;
+	margin: 113px 100px auto 0px;
+	border: 1px solid #c8d9ef;
+	padding: 20px;
+}
+h1{
+	text-align: center;
+	line-height: 40px;
+}
+span{
+	margin: 20px auto;
+	display: block;
+	width: 300px;
+	height: 40px;
+}
+label{
+	display: block;
+	float: left;
+	width: 75px;
+	text-align: right;
+	font-size: 15px;
+	line-height: 25px;
+}
+.main form span input{
+	font-size: 15px;
+	height: 25px;
+	width: 216px;
+	background: none;
+	margin: 0px;
+}
+.main form input{
+	height: 34px;
+	width: 100px;
+	margin: 10px 20px 80px 80px;
+	background:url(../image/register_bg.gif) 0 0 transparent repeat-x;
+}
+
+.main form a{
+	font-size: 15px;
+}

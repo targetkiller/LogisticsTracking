@@ -1,0 +1,87 @@
+ul{
+	height: 34px;
+	line-height: 34px;
+	text-align: center;
+	background:url(../image/register_bg.gif) 0 0 transparent repeat-x;
+}
+li{
+	cursor:pointer;
+	height: 34px;
+	line-height: 34px;
+	list-style: none;
+	background-color:#f4f8fc;
+	text-align: center;
+
+}
+form{
+	width: 700px;
+	height: auto;
+	border: 1px solid #c8d9ef;
+	background: url(../image/footer_logo.png) right bottom no-repeat #f4f8fc;
+}
+span{
+	width: 730px;
+	display: block;
+}
+.main{
+	width: 1024px;
+	margin: 41px auto;
+}
+.title{
+	width: 940px;
+	height: 60px;
+}
+.content{
+	width: 700px;
+	height: auto;
+	margin: 30px auto auto 190px;
+}
+.infobar{
+	width: 700px;
+	height: 34px;
+	background-color:#f4f8fc;
+	border: 1px solid #c8d9ef;
+	border-bottom: none;
+	line-height: 34px;
+	font-size: 16px;
+	color: #3f73eb;
+	text-align: center;
+}
+.functionbar{
+	margin-top:30px;
+	float: left;
+	width: 160px;
+}
+.input span{
+	clear: both;
+	height: 20px;
+	margin: 10px auto auto auto;
+}
+.input span label{
+	display: block;
+	float: left;
+	width: 130px;
+	text-align: right;
+}
+.input span label.tips{
+	margin-left: 25px;
+	width: 250px;
+	text-align: left;
+}
+.input span input{
+	border: 1px solid #afafaf;
+	float: left;
+}
+.explain span{
+	/*height: 20px;*/
+	line-height: 20px;
+	margin: auto 15px;
+}
+.explain{
+	overflow: hidden;
+	width: 500px;
+	padding: 4px;
+	border: 1px solid #c9d7e0;
+	margin: 30px auto 25px 70px;
+	background-color:#ffffff;
+}

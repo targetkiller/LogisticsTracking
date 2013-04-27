@@ -1,0 +1,72 @@
+#{extends 'main_title_bar.html'/}
+#{set title:'订单处理'/}
+
+#{set 'moreStyles'}
+<link rel="stylesheet" href="@{'/public/stylesheets/checkOrder.css'}" />
+<link rel="stylesheet" href="@{'/public/stylesheets/bar.css'}" />
+#{/set}
+#{set 'moreScripts'}
+<script type="text/javascript" src="@{'/public/javascripts/information.js'}"></script>
+#{/set}
+
+    <div class="content">
+        <div class="infobar">
+            <p>
+                <strong>订单信息</strong> 
+            </p>
+        </div>
+        <form action="@{OrderDetails.add}" method="post">
+            <div id="explain" class="explain" >
+                <span>订单信息:</span>
+                <span>&nbsp&nbsp&nbsp&nbsp</span>
+                <span>用户昵称: ${orderForm.userName}</span>
+                <span>订 单 号: ${orderForm.code}</span>
+                <span>邮&nbsp&nbsp&nbsp&nbsp编: ${orderForm.zipCode}</span>
+                <span>数&nbsp&nbsp&nbsp&nbsp量: ${orderForm.amount}</span>
+                <span>重&nbsp&nbsp&nbsp&nbsp量: ${orderForm.weight}</span>
+                <span>条 形 码: ${orderForm.barcode}</span>
+                <span>详细地址: ${orderForm.address}</span>
+                <span>订单内容: ${orderForm.content}</span>
+                <span><input type="hidden" name="orderFormId"  value="${orderForm.id}" /> </span>
+            </div>
+            <div id="explain" class="explain" >
+                <span>依次经过的工作站:</span>
+                <span>&nbsp&nbsp&nbsp&nbsp</span>
+                #{list items:orderDetails,as:'od'}
+                <span>工作站:${od.station.name}</span>
+                <span>时&nbsp&nbsp间:${od.time} </span>
+                <span>处理人:${od.userInfo.name} </span>
+                <span>描&nbsp&nbsp述:${od.description} </span>
+                <span>下一站:${controllers.Stations.getStationName(od.nextStationId)}</span>
+                <span>&nbsp&nbsp&nbsp&nbsp</span>
+                #{/list}
+            </div>
+            <div id="explain" class="explain" >  
+                <span>&nbsp&nbsp信息填写:</span>
+                <span>&nbsp&nbsp&nbsp&nbsp</span>
+                <span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp本站:${orderDetail.station.name}  </span>
+                <span>&nbsp&nbsp&nbsp&nbsp</span>
+                <span><input type="hidden" name="stationId"  value="${orderDetail.station.id}" /> </span>
+                <span>
+                    <label for="contentinput" >&nbsp&nbsp订单内容:</label>
+                    <textarea name="content"  onblur="onBlur(this,'contenttip');" onfocus="onFocus(this,'contenttip');"></textarea>
+                    <label for="tips" class="error" style="color: red;float:none;">#{error 'content'/}</label>
+                    <label for="#" id="contenttip" class="remind">请出入正确的内容</label>
+                </span>  
+                <span>&nbsp&nbsp&nbsp&nbsp</span>
+                <span>
+                    <label for="#" >下一工作站:</label>
+                    <select name="nextStationId">
+                        <option value=-1>已是最后一站</option>
+                        #{list items:allStation,as:'station'}
+                        <option value="${station.id}">${station.name}</option>
+                        #{/list}
+                    </select>
+                </span>
+                <span>
+                    <input type="submit" class="btn" value="确定"/>
+
+                </span>
+            </div>
+        </form>
+    </div>

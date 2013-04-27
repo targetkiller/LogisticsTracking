@@ -1,0 +1,38 @@
+#{extends 'main_title_bar.html'/}
+#{set 'moreStyles'}
+<link rel="stylesheet" href="@{'/public/stylesheets/information.css'}" />
+<link rel="stylesheet" href="@{'/public/stylesheets/bar.css'}" />
+#{/set}
+#{set 'moreScripts'}
+<script type="text/javascript" src="@{'/public/javascripts/information.js'}"></script>
+#{/set}
+#{set title:'更新角色'/}
+        <div class="content">
+            <div class="infobar">
+                <p>
+                    <strong>更新角色</strong> (用*标记的信息是十分重要的信息)
+                </p>
+            </div>
+            <form action="@{Roles.update}" method="post">
+                <input type="hidden" name="role1.id" value="${role1.id}"/>
+
+                <span>
+                    <label for="nameinput">*角色名:</label>
+                    <input type="text" name="role1.name" value="${role1?.name}"  id="nameinput" onblur="onBlur(this,'name');" onfocus="onFocus(this,'name');"/>
+                    <label for="" class="error" style="color: red;float:none;">#{error 'role1.name'/}</label> 
+                    <label for="#" id="name" class="remind">请输入正确的角色名</label>
+                </span>
+
+                <span>
+                    <label for="discriptioninput" >*详细角色描述:</label>
+                    <textarea id="discriptioninput" name="role1.discription" onblur="onBlur(this,'discription');" onfocus="onFocus(this,'discription');">${role1?.discription}</textarea>
+                    <label for="" class="error" style="color: red;float:none;">#{error 'role1.discription'/}</label>
+                    <label for="#" id="discription" class="remind">请出入正确的角色描述</label>
+                </span>
+                <span class="submit">
+                    <input type="submit" onclick="verification();"/>
+                </span>
+
+            </form>
+        </div>
+  

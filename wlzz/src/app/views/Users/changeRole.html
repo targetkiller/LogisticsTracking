@@ -1,0 +1,44 @@
+#{extends 'main_title_bar.html'/}
+#{set 'moreStyles'}
+<link rel="stylesheet" href="@{'/public/stylesheets/information.css'}" />
+<link rel="stylesheet" href="@{'/public/stylesheets/bar.css'}" />
+#{/set}
+#{set 'moreScripts'}
+<script type="text/javascript" src="@{'/public/javascripts/information.js'}"></script>
+#{/set}
+#{set title:'修改角色'/}
+        <div class="content">
+            <div class="infobar">
+                <p>
+                    <strong>修改角色</strong> (用*标记的信息是十分重要的信息)
+                </p>
+            </div>
+            <form action="@{Users.changeRole}">
+
+                <span>
+                    <label for="account">用户账号:</label> 
+                    <label for="#" id="account">${account}</label>
+                    <input type="hidden" name="account" value="${account}"/>
+                </span>
+
+                <span>
+                    <label for="oldRoleinput">*旧角色:</label>
+                    <input type="text" name="oldRole" value="${oldRole}"  id="oldRoleinput" onblur="onBlur(this,'oldRole');" onfocus="onFocus(this,'oldRole');"/>
+                    <label for="" class="error" style="color: red;float:none;">#{error 'oldRole'/}</label> 
+                    <label for="#" id="oldRole" class="remind">请输入正确的旧角色</label>
+                </span>
+
+                <span>
+                    <label for="newRoleinput">*新角色:</label>
+                    <input type="text" name="newRole" value="${newRole}" id="newRoleinput" onblur="onBlur(this,'newRole');" onfocus="onFocus(this,'newRole');"/>
+                    <label for="" class="error" style="color: red;float:none;">#{error 'newRole'/}</label> 
+                    <label for="#" id="newRole" class="remind">请输入正确的新角色</label>
+                </span>
+
+                <span class="submit">
+                    <input type="submit" onclick="verification();"/>
+                    <label for="" class="error" style="color: red;float:none;">${errorMessage}</label>
+                </span>
+
+            </form>
+        </div>

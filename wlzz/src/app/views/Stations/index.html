@@ -1,0 +1,79 @@
+#{extends 'main_title_bar.html'/}
+#{set title:'工作站'/}
+
+#{set 'moreStyles'}
+<link rel="stylesheet" href="@{'/public/stylesheets/secondRegister.css'}" />
+<link rel="stylesheet" href="@{'/public/stylesheets/table.css'}" />
+<link rel="stylesheet" href="@{'/public/stylesheets/bar.css'}" />
+#{/set}
+#{set 'moreScripts'}
+<script type="text/javascript" src="@{'/public/javascripts/searchInput.js'}"></script>
+<script type="text/javascript" src="@{'/public/javascripts/secondRegister.js'}"></script>
+#{/set}
+    <div class="content">
+        <div class="infobar">
+            <span><strong>站台列表</strong></span>
+
+        </div>
+
+
+
+        <div class="sitelist">
+
+            #{list items:allStation,as:'station'}
+            <div class="site">
+                <span class="siteimage">
+                    <a href="@{Stations.show(station.id)}">
+                        <img src="@{'/public/images/siteImage.png'}" alt="#" />
+                    </a>
+                </span>
+                <span>站台:${station.name}</span>
+                <span>地址:${station.address}</span>
+                <span>电话:${station.phone}</span>
+                <span><a href="@{Stations.show(station.id)}"><button >详细信息</button></a></span><!-- onclick="dialog();" -->
+            </div>
+            #{/list}
+
+        </div>
+
+        <div class="page">
+            #{if page > 1}<span><a href="@{Stations.index}?pages=1">首页</a></span>#{/if}#{else}<span><a href="#">首页</a></span>#{/else}
+            #{if page > 1}<span><a href="@{Stations.index}?pages=${page-1}">上一页</a></span>#{/if}#{else}<span><a href="#">上一页</a></span>#{/else}
+
+            #{list items:pageList,as:'pagelist'}
+            #{if page == pagelist }
+            <span>${page}</span>
+            #{/if}
+            #{else}
+            <span><a href="@{Stations.index}?pages=${pagelist}">${pagelist}</a></span>
+            #{/else}
+            #{/list}
+
+            #{if page < allPage}<span><a href="@{Stations.index}?pages=${page+1}">下一页</a></span>#{/if}#{else}<span><a href="#">下一页</a></span>#{/else}
+            #{if page < allPage}<span><a href="@{Stations.index}?pages=${allPage}">尾页</a></span>#{/if}#{else}<span><a href="#">尾页</a></span>#{/else}
+        </div>
+
+
+
+    </div>
+
+<div id="overall" style="display: none;"></div>
+<div id="alert" style="display: none;">
+    <span class="account">
+        <label for="account">账号:</label>
+        <input type="text" />
+    </span>
+    <span class="password">
+        <label for="password">密码:</label>
+        <input type="text" />
+    </span>
+    <span class="button">
+        <button>登陆</button>
+        <button onclick="disappear();">取消</button>
+    </span>
+</div>
+<div class="logo" id="logo" style="display: none;">
+    <img src="@{'/public/images/dialog_logo.png'}" alt="#" />
+</div>
+
+
